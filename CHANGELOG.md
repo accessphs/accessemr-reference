@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.0.1 (2026-11-26)
+
+**Data** (AccessEMR core commit `597f1ceb`):
+- Brand names "Coartem" and "Coartem Dispersible" added to the artemether + lumefantrine tablets, so
+  `check({ drugs: [{ name: 'Coartem' }] })` now resolves to both ingredients without strength text.
+
+**Engine:**
+- Rules from the ONC high-priority interaction list now report `evidence.source` as
+  "ONC high-priority list" (was "Onc list").
+- Alerts and notices of equal rank now come out in rule-file order, matching AccessEMR, which now sorts
+  them the same way.
+- Parity cases: 53, up from 51. The new cases cover the Coartem brand and an interaction that only
+  the ONC high-priority list contains.
+
 ## 1.0.0 (2026-11-26)
 
 First hand-over.

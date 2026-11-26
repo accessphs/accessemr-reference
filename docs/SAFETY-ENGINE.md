@@ -7,7 +7,7 @@ The engine checks the drugs a prescriber is about to order against:
 - the patient's recorded **drug allergies**, including cross-reacting drug groups
 
 It is a faithful TypeScript port of the check AccessEMR runs on every prescription (Ruby `Medkb::SafetyCheck`).
-The parity suite (`tests/parity/`) runs 51 cases through both and requires identical output.
+The parity suite (`tests/parity/`) runs 53 cases through both and requires identical output.
 
 **It runs locally.** The engine is a pure function over the data files you load. It makes no network calls,
 so patient data (medicines, allergies, pregnancy) never leaves your app.
@@ -74,7 +74,7 @@ Both are lists of **items** (AccessEMR contract C2):
 | `effect` | What can happen. For allergy-group items, the group's text. |
 | `action` | What to do. |
 | `evidence.quote` | The sentence from the source label (null for allergy-group items). |
-| `evidence.source` | `FDA label`, `Onc list` (the ONC high-priority interaction list; AccessEMR shows this label as is) or `Allergy group (AccessEMR)`. |
+| `evidence.source` | `FDA label`, `ONC high-priority list` or `Allergy group (AccessEMR)`. |
 | `evidence.set_id` | DailyMed set id of the label (link: `https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=<set_id>`). |
 | `evidence.section` | Label section the quote is from. |
 

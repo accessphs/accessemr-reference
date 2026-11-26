@@ -2,7 +2,7 @@
 
 ## Two version numbers
 
-- **Package version** (`package.json`, semver, now `1.0.0`): the engine and the shape of the data.
+- **Package version** (`package.json`, semver, now `1.0.1`): the engine and the shape of the data.
   - **Patch** (1.0.x): data refresh only (new drugs, brands, rules, codes), or a bug fix that does not change the
     API or the file formats.
   - **Minor** (1.x.0): additions that do not break you: a new data file, a new optional field, a new helper

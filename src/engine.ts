@@ -22,6 +22,7 @@ const SOURCES: Record<string, string> = {
   fda_label: 'FDA label',
   onc_high_priority: 'ONC high-priority list',
   onc: 'ONC high-priority list',
+  onc_list: 'ONC high-priority list',
 };
 const GROUP_SOURCE = 'Allergy group (AccessEMR)';
 const ALLERGY_ACTION = 'Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.';

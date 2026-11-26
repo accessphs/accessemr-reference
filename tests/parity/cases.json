@@ -114,6 +114,38 @@
   "pregnant": false
  },
  {
+  "id": "coartem_brand",
+  "description": "Brand Coartem (alias added in 1.0.1) with rifampicin",
+  "drugs": [
+   {
+    "name": "Coartem"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Rifampicin"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "onc_irinotecan_clarithromycin",
+  "description": "Rule only on the ONC high-priority list (irinotecan + CYP3A inhibitor)",
+  "drugs": [
+   {
+    "name": "Clarithromycin"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Irinotecan"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
   "id": "penicillin_amoxicillin",
   "description": "Penicillin allergy blocks amoxicillin",
   "drugs": [

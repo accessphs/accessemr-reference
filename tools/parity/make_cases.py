@@ -18,6 +18,8 @@ CASES = [
     ('rifampicin_combination_slash', 'Combination order with slash and strength', [D('Rifampicin')], [D('Artemether/Lumefantrine', '80mg/480mg')], [], False),
     ('amatem_forte_brand', 'Brand alias from drugs.csv resolves to the combination', [D('Amatem Forte')], [D('Rifampicin 600mg')], [], False),
     ('coartem_strength_split', 'Unknown brand, ingredients in the strength text', [D('Coartem', 'artemether 20mg / lumefantrine 120mg')], [D('Rifampicin')], [], False),
+    ('coartem_brand', 'Brand Coartem (alias added in 1.0.1) with rifampicin', [D('Coartem')], [D('Rifampicin')], [], False),
+    ('onc_irinotecan_clarithromycin', 'Rule only on the ONC high-priority list (irinotecan + CYP3A inhibitor)', [D('Clarithromycin')], [D('Irinotecan')], [], False),
     ('penicillin_amoxicillin', 'Penicillin allergy blocks amoxicillin', [D('Amoxicillin')], [], [A('Penicillin')], False),
     ('pcn_amoxicillin', '"PCN" synonym', [D('Amoxicillin 500mg Capsule')], [], [A('PCN')], False),
     ('penicillin_ceftriaxone_cross', 'Penicillin allergy, cephalosporin cross-reaction', [D('Ceftriaxone')], [], [A('Penicillin')], False),

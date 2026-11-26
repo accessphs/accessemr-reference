@@ -17,7 +17,7 @@
    **no patient data is sent anywhere**.
 3. **Search helpers** for the ICD-10 list and the drug list (prefix and substring, brand names included).
 
-The engine is tested against AccessEMR's own Ruby engine: 51 golden cases give identical output
+The engine is tested against AccessEMR's own Ruby engine: 53 golden cases give identical output
 (`tests/parity/`).
 
 > Clinical decision support only. The prescriber stays responsible for every prescribing decision. The data
@@ -43,7 +43,7 @@ The engine is tested against AccessEMR's own Ruby engine: 51 golden cases give i
 The package is not published to npm. Install it from the tarball we sent you:
 
 ```bash
-npm install ./accessphs-accessemr-reference-1.0.0.tgz
+npm install ./accessphs-accessemr-reference-1.0.1.tgz
 ```
 
 Or unzip the source archive, run `npm install && npm run build`, and install from the folder.

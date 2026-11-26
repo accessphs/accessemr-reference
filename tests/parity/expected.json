@@ -1,6 +1,6 @@
 {
   "generated_by": "tools/parity/parity.rb (Medkb::SafetyCheck, AccessEMR core)",
-  "core_commit": "4ee294765db92c248893e07ebcf1c33fd8479e6e",
+  "core_commit": "821d39beb9e7fee6afcd465b6e9416975ededbf2",
   "loaded": {
     "generics": 2516,
     "drugs": 3160,
@@ -151,6 +151,48 @@
             "source": "FDA label",
             "set_id": "7866ec19-dfac-47d4-a53f-511a12643cbf",
             "section": "contraindications"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "coartem_brand": {
+      "alerts": [
+        {
+          "rule_id": "ix:f5acaecd24e3c6c5",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Coartem",
+          "other": "Rifampicin",
+          "effect": "decreased concentrations of artemether and/or lumefantrine and loss of antimalarial efficacy",
+          "action": "avoid coadministration with strong CYP3A4 inducers",
+          "evidence": {
+            "quote": "Coadministration of strong inducers of CYP3A4 such as rifampin, carbamazepine, phenytoin, and St. John’s wort with Coartem Tablets can result in decreased concentrations of artemether and/or lumefantrine and loss of antimalarial efficacy",
+            "source": "FDA label",
+            "set_id": "7866ec19-dfac-47d4-a53f-511a12643cbf",
+            "section": "contraindications"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "onc_irinotecan_clarithromycin": {
+      "alerts": [
+        {
+          "rule_id": "ix:743b0cce214fad3c",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Clarithromycin",
+          "other": "Irinotecan",
+          "effect": "Raised irinotecan toxicity",
+          "action": "Do not combine",
+          "evidence": {
+            "quote": "Listed on the ONC high-priority drug-drug interaction list (Phansalkar et al., JAMIA 2012).",
+            "source": "ONC high-priority list",
+            "set_id": null,
+            "section": null
           }
         }
       ],
@@ -1205,7 +1247,7 @@
           "action": "Do not combine",
           "evidence": {
             "quote": "Listed on the ONC high-priority drug-drug interaction list (Phansalkar et al., JAMIA 2012).",
-            "source": "Onc list",
+            "source": "ONC high-priority list",
             "set_id": null,
             "section": null
           }
@@ -1226,7 +1268,7 @@
           "action": "Do not combine",
           "evidence": {
             "quote": "Listed on the ONC high-priority drug-drug interaction list (Phansalkar et al., JAMIA 2012).",
-            "source": "Onc list",
+            "source": "ONC high-priority list",
             "set_id": null,
             "section": null
           }

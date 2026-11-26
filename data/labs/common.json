@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "common_tests": {
+    "lab": [
+      "lab:full-blood-count-fbc",
+      "lab:haematocrit-pcv",
+      "lab:erythrocyte-sedimentation-rate-esr",
+      "lab:malaria-parasite-mp",
+      "lab:malaria-rapid-diagnostic-test-rdt",
+      "lab:widal-test",
+      "lab:blood-culture",
+      "lab:haemoglobin-genotype",
+      "lab:blood-group-abo-rh-typing",
+      "lab:urinalysis-and-urine-mcs",
+      "lab:urine-microscopy-culture-and-sensitivity-m-c-s",
+      "lab:stool-microscopy",
+      "lab:stool-microscopy-culture-and-sensitivity-m-c-s",
+      "lab:electrolytes-urea-and-creatinine-e-u-cr",
+      "lab:liver-function-test-lft",
+      "lab:random-blood-sugar-rbs",
+      "lab:fasting-blood-sugar-fbs",
+      "lab:glycated-haemoglobin-hba1c",
+      "lab:hiv-i-ii-antibody-screen",
+      "lab:hepatitis-b-surface-antigen-hbsag",
+      "lab:hepatitis-c-virus-total-antibody",
+      "lab:vdrl",
+      "lab:mantoux-test-tuberculin-skin-test",
+      "lab:genexpert-mtb-rif",
+      "lab:afb-smear-examination",
+      "lab:pregnancy-test",
+      "lab:lipid-profile",
+      "lab:thyroid-function-test-tft",
+      "lab:c-reactive-protein-crp-serum",
+      "lab:g6pd-screening",
+      "lab:reticulocyte-count",
+      "lab:bilirubin-direct-and-indirect",
+      "lab:csf-analysis",
+      "lab:wound-swab-m-c-s",
+      "lab:high-vaginal-swab-penile-swab-urethral-swab"
+    ],
+    "imaging": [
+      "img:chest-x-ray",
+      "img:abdominal-ultrasound",
+      "img:pelvic-ultrasound",
+      "img:obstetric-ultrasound",
+      "img:skull-x-ray",
+      "img:extremity-x-ray",
+      "img:ecg-electrocardiogram",
+      "img:echocardiography"
+    ]
+  },
+  "panels": [
+    {
+      "key": "fever_workup",
+      "name": "Fever workup",
+      "kind": "lab",
+      "indication": "Acute fever without an obvious focus",
+      "codes": [
+        "lab:full-blood-count-fbc",
+        "lab:malaria-parasite-mp",
+        "lab:malaria-rapid-diagnostic-test-rdt",
+        "lab:blood-culture",
+        "lab:urinalysis-and-urine-mcs"
+      ]
+    },
+    {
+      "key": "neonatal_sepsis",
+      "name": "Neonatal sepsis",
+      "kind": "lab",
+      "indication": "Newborn with suspected sepsis (add CSF analysis if a lumbar puncture is done)",
+      "codes": [
+        "lab:full-blood-count-fbc",
+        "lab:c-reactive-protein-crp-serum",
+        "lab:blood-culture",
+        "lab:random-blood-sugar-rbs"
+      ]
+    },
+    {
+      "key": "sickle_cell_crisis",
+      "name": "Sickle cell crisis",
+      "kind": "lab",
+      "indication": "Known sickle cell disease presenting in crisis",
+      "codes": [
+        "lab:full-blood-count-fbc",
+        "lab:reticulocyte-count",
+        "lab:malaria-parasite-mp",
+        "lab:blood-culture",
+        "lab:electrolytes-urea-and-creatinine-e-u-cr"
+      ]
+    },
+    {
+      "key": "antenatal_booking",
+      "name": "Antenatal booking",
+      "kind": "lab",
+      "indication": "First antenatal visit",
+      "codes": [
+        "lab:haematocrit-pcv",
+        "lab:blood-group-abo-rh-typing",
+        "lab:haemoglobin-genotype",
+        "lab:hiv-i-ii-antibody-screen",
+        "lab:hepatitis-b-surface-antigen-hbsag",
+        "lab:hepatitis-c-virus-total-antibody",
+        "lab:vdrl",
+        "lab:urinalysis-and-urine-mcs",
+        "lab:random-blood-sugar-rbs"
+      ]
+    },
+    {
+      "key": "pre_op",
+      "name": "Pre-op",
+      "kind": "lab",
+      "indication": "Routine work-up before surgery",
+      "codes": [
+        "lab:full-blood-count-fbc",
+        "lab:blood-group-abo-rh-typing",
+        "lab:haemoglobin-genotype",
+        "lab:electrolytes-urea-and-creatinine-e-u-cr",
+        "lab:random-blood-sugar-rbs",
+        "lab:hiv-i-ii-antibody-screen",
+        "lab:hepatitis-b-surface-antigen-hbsag",
+        "lab:hepatitis-c-virus-total-antibody",
+        "lab:urinalysis-and-urine-mcs"
+      ]
+    },
+    {
+      "key": "diabetes_review",
+      "name": "Diabetes review",
+      "kind": "lab",
+      "indication": "Routine review of a patient with diabetes",
+      "codes": [
+        "lab:fasting-blood-sugar-fbs",
+        "lab:glycated-haemoglobin-hba1c",
+        "lab:electrolytes-urea-and-creatinine-e-u-cr",
+        "lab:lipid-profile",
+        "lab:urinalysis-and-urine-mcs"
+      ]
+    },
+    {
+      "key": "hypertension_review",
+      "name": "Hypertension review",
+      "kind": "lab",
+      "indication": "Routine review of a patient with hypertension (order an ECG separately)",
+      "codes": [
+        "lab:electrolytes-urea-and-creatinine-e-u-cr",
+        "lab:lipid-profile",
+        "lab:fasting-blood-sugar-fbs",
+        "lab:urinalysis-and-urine-mcs"
+      ]
+    },
+    {
+      "key": "diarrhoea_dehydration",
+      "name": "Diarrhoea / dehydration",
+      "kind": "lab",
+      "indication": "Acute diarrhoea with dehydration",
+      "codes": [
+        "lab:electrolytes-urea-and-creatinine-e-u-cr",
+        "lab:full-blood-count-fbc",
+        "lab:stool-microscopy",
+        "lab:stool-microscopy-culture-and-sensitivity-m-c-s"
+      ]
+    },
+    {
+      "key": "uti",
+      "name": "UTI",
+      "kind": "lab",
+      "indication": "Suspected urinary tract infection",
+      "codes": [
+        "lab:urinalysis-and-urine-mcs",
+        "lab:urine-microscopy-culture-and-sensitivity-m-c-s"
+      ]
+    },
+    {
+      "key": "neonatal_jaundice",
+      "name": "Neonatal jaundice",
+      "kind": "lab",
+      "indication": "Jaundiced newborn",
+      "codes": [
+        "lab:bilirubin-direct-and-indirect",
+        "lab:full-blood-count-fbc",
+        "lab:blood-group-abo-rh-typing",
+        "lab:g6pd-screening",
+        "lab:reticulocyte-count"
+      ]
+    }
+  ]
+}

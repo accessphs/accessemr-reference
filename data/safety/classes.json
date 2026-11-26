@@ -1,0 +1,1457 @@
+[
+ {
+  "class_id": "c:allergy:aspirin",
+  "name": "Aspirin / salicylates",
+  "members": [
+   "g:acetylsalicylic-acid"
+  ]
+ },
+ {
+  "class_id": "c:allergy:cephalosporins",
+  "name": "Cephalosporins",
+  "members": [
+   "g:cefaclor",
+   "g:cefadroxil",
+   "g:cefalexin",
+   "g:cefazolin",
+   "g:cefdinir",
+   "g:cefepime",
+   "g:cefixime",
+   "g:cefotaxime",
+   "g:cefpodoxime",
+   "g:ceftazidime",
+   "g:ceftriaxone",
+   "g:cefuroxime"
+  ]
+ },
+ {
+  "class_id": "c:allergy:macrolides",
+  "name": "Macrolides",
+  "members": [
+   "g:azithromycin",
+   "g:clarithromycin",
+   "g:erythromycin"
+  ]
+ },
+ {
+  "class_id": "c:allergy:nitroimidazoles",
+  "name": "Nitroimidazoles",
+  "members": [
+   "g:metronidazole",
+   "g:secnidazole",
+   "g:tinidazole"
+  ]
+ },
+ {
+  "class_id": "c:allergy:penicillins",
+  "name": "Penicillins",
+  "members": [
+   "g:amoxicillin",
+   "g:ampicillin",
+   "g:benzathine-benzylpenicillin",
+   "g:benzylpenicillin",
+   "g:cloxacillin",
+   "g:dicloxacillin",
+   "g:flucloxacillin",
+   "g:phenoxymethylpenicillin",
+   "g:piperacillin",
+   "g:procaine-benzylpenicillin"
+  ]
+ },
+ {
+  "class_id": "c:allergy:phenothiazines",
+  "name": "Phenothiazines",
+  "members": [
+   "g:chlorpromazine",
+   "g:fluphenazine",
+   "g:prochlorperazine",
+   "g:promethazine"
+  ]
+ },
+ {
+  "class_id": "c:allergy:sulfonamide-antibiotics",
+  "name": "Sulfonamide antibiotics",
+  "members": [
+   "g:silver-sulfadiazine",
+   "g:sulfacetamide",
+   "g:sulfadiazine",
+   "g:sulfadoxine",
+   "g:sulfamethoxazole",
+   "g:sulfasalazine"
+  ]
+ },
+ {
+  "class_id": "c:allergy:tetracyclines",
+  "name": "Tetracyclines",
+  "members": [
+   "g:doxycycline",
+   "g:minocycline",
+   "g:oxytetracycline",
+   "g:tetracycline"
+  ]
+ },
+ {
+  "class_id": "c:cyp:cyp1a2-inhibitors",
+  "name": "CYP1A2 inhibitors (strong or moderate)",
+  "members": [
+   "g:ciprofloxacin",
+   "g:fluvoxamine",
+   "g:methoxsalen",
+   "g:vemurafenib"
+  ]
+ },
+ {
+  "class_id": "c:cyp:cyp2c19-inhibitors",
+  "name": "Strong CYP2C19 inhibitors",
+  "members": [
+   "g:fluconazole",
+   "g:fluoxetine",
+   "g:fluvoxamine"
+  ]
+ },
+ {
+  "class_id": "c:cyp:cyp2c9-inhibitors",
+  "name": "Moderate/strong CYP2C9 inhibitors",
+  "members": [
+   "g:amiodarone",
+   "g:fluconazole",
+   "g:miconazole"
+  ]
+ },
+ {
+  "class_id": "c:cyp:cyp2d6-inhibitors",
+  "name": "Strong CYP2D6 inhibitors",
+  "members": [
+   "g:bupropion",
+   "g:fluoxetine",
+   "g:paroxetine",
+   "g:quinidine",
+   "g:terbinafine"
+  ]
+ },
+ {
+  "class_id": "c:cyp:cyp3a-inducers",
+  "name": "CYP3A inducers (strong or moderate)",
+  "members": [
+   "g:apalutamide",
+   "g:bosentan",
+   "g:carbamazepine",
+   "g:dabrafenib",
+   "g:efavirenz",
+   "g:enzalutamide",
+   "g:etravirine",
+   "g:phenobarbital",
+   "g:phenytoin",
+   "g:primidone",
+   "g:rifampicin"
+  ]
+ },
+ {
+  "class_id": "c:cyp:cyp3a-inhibitors",
+  "name": "CYP3A inhibitors (strong or moderate)",
+  "members": [
+   "g:aprepitant",
+   "g:ciprofloxacin",
+   "g:clarithromycin",
+   "g:crizotinib",
+   "g:diltiazem",
+   "g:erythromycin",
+   "g:fluconazole",
+   "g:imatinib",
+   "g:indinavir",
+   "g:itraconazole",
+   "g:ketoconazole",
+   "g:lopinavir",
+   "g:nelfinavir",
+   "g:ritonavir",
+   "g:saquinavir",
+   "g:verapamil",
+   "g:voriconazole"
+  ]
+ },
+ {
+  "class_id": "c:cyp:moderate-cyp3a-inducers",
+  "name": "Moderate CYP3A inducers",
+  "members": [
+   "g:bosentan",
+   "g:dabrafenib",
+   "g:efavirenz",
+   "g:etravirine",
+   "g:phenobarbital",
+   "g:primidone"
+  ]
+ },
+ {
+  "class_id": "c:cyp:moderate-cyp3a-inhibitors",
+  "name": "Moderate CYP3A inhibitors",
+  "members": [
+   "g:aprepitant",
+   "g:ciprofloxacin",
+   "g:crizotinib",
+   "g:diltiazem",
+   "g:erythromycin",
+   "g:fluconazole",
+   "g:imatinib",
+   "g:verapamil"
+  ]
+ },
+ {
+  "class_id": "c:cyp:strong-cyp1a2-inhibitors",
+  "name": "Strong CYP1A2 inhibitors",
+  "members": [
+   "g:fluvoxamine"
+  ]
+ },
+ {
+  "class_id": "c:cyp:strong-cyp3a-inducers",
+  "name": "Strong CYP3A inducers",
+  "members": [
+   "g:apalutamide",
+   "g:carbamazepine",
+   "g:enzalutamide",
+   "g:phenytoin",
+   "g:rifampicin"
+  ]
+ },
+ {
+  "class_id": "c:cyp:strong-cyp3a-inhibitors",
+  "name": "Strong CYP3A inhibitors",
+  "members": [
+   "g:clarithromycin",
+   "g:indinavir",
+   "g:itraconazole",
+   "g:ketoconazole",
+   "g:lopinavir",
+   "g:nelfinavir",
+   "g:ritonavir",
+   "g:saquinavir",
+   "g:voriconazole"
+  ]
+ },
+ {
+  "class_id": "c:epc:alkaloid",
+  "name": "Alkaloid",
+  "members": [
+   "g:colchicine"
+  ]
+ },
+ {
+  "class_id": "c:epc:alpha-adrenergic-agonist",
+  "name": "alpha-Adrenergic Agonist",
+  "members": [
+   "g:epinephrine"
+  ]
+ },
+ {
+  "class_id": "c:epc:aminoglycoside-antibacterial",
+  "name": "Aminoglycoside Antibacterial",
+  "members": [
+   "g:amikacin",
+   "g:tobramycin"
+  ]
+ },
+ {
+  "class_id": "c:epc:aminosalicylate",
+  "name": "Aminosalicylate",
+  "members": [
+   "g:mesalazine",
+   "g:sulfasalazine"
+  ]
+ },
+ {
+  "class_id": "c:epc:androgen",
+  "name": "Androgen",
+  "members": [
+   "g:danazol",
+   "g:testosterone"
+  ]
+ },
+ {
+  "class_id": "c:epc:angiotensin-2-receptor-blocker",
+  "name": "Angiotensin 2 Receptor Blocker",
+  "members": [
+   "g:irbesartan",
+   "g:telmisartan",
+   "g:valsartan"
+  ]
+ },
+ {
+  "class_id": "c:epc:angiotensin-converting-enzyme-inhibitor",
+  "name": "Angiotensin Converting Enzyme Inhibitor",
+  "members": [
+   "g:captopril",
+   "g:ramipril"
+  ]
+ },
+ {
+  "class_id": "c:epc:antiarrhythmic",
+  "name": "Antiarrhythmic",
+  "members": [
+   "g:lidocaine"
+  ]
+ },
+ {
+  "class_id": "c:epc:anticholinergic",
+  "name": "Anticholinergic",
+  "members": [
+   "g:atropine",
+   "g:tropicamide"
+  ]
+ },
+ {
+  "class_id": "c:epc:antimalarial",
+  "name": "Antimalarial",
+  "members": [
+   "g:atovaquone"
+  ]
+ },
+ {
+  "class_id": "c:epc:antimycobacterial",
+  "name": "Antimycobacterial",
+  "members": [
+   "g:clofazimine",
+   "g:isoniazid",
+   "g:pretomanid",
+   "g:pyrazinamide"
+  ]
+ },
+ {
+  "class_id": "c:epc:atypical-antipsychotic",
+  "name": "Atypical Antipsychotic",
+  "members": [
+   "g:aripiprazole",
+   "g:brexpiprazole",
+   "g:clozapine",
+   "g:olanzapine",
+   "g:paliperidone",
+   "g:quetiapine",
+   "g:risperidone"
+  ]
+ },
+ {
+  "class_id": "c:epc:azole-antifungal",
+  "name": "Azole Antifungal",
+  "members": [
+   "g:clotrimazole",
+   "g:fluconazole",
+   "g:itraconazole",
+   "g:ketoconazole",
+   "g:miconazole",
+   "g:tioconazole",
+   "g:voriconazole"
+  ]
+ },
+ {
+  "class_id": "c:epc:benzodiazepine",
+  "name": "Benzodiazepine",
+  "members": [
+   "g:alprazolam",
+   "g:clonazepam",
+   "g:diazepam",
+   "g:lorazepam",
+   "g:midazolam"
+  ]
+ },
+ {
+  "class_id": "c:epc:beta-adrenergic-blocker",
+  "name": "beta-Adrenergic Blocker",
+  "members": [
+   "g:atenolol",
+   "g:carvedilol",
+   "g:labetalol",
+   "g:nebivolol",
+   "g:timolol"
+  ]
+ },
+ {
+  "class_id": "c:epc:bile-acid-sequestrant",
+  "name": "Bile Acid Sequestrant",
+  "members": [
+   "g:colestyramine"
+  ]
+ },
+ {
+  "class_id": "c:epc:calcium-channel-blocker",
+  "name": "Calcium Channel Blocker",
+  "members": [
+   "g:amlodipine"
+  ]
+ },
+ {
+  "class_id": "c:epc:carbonic-anhydrase-inhibitor",
+  "name": "Carbonic Anhydrase Inhibitor",
+  "members": [
+   "g:acetazolamide",
+   "g:brinzolamide"
+  ]
+ },
+ {
+  "class_id": "c:epc:cardiac-glycoside",
+  "name": "Cardiac Glycoside",
+  "members": [
+   "g:digoxin"
+  ]
+ },
+ {
+  "class_id": "c:epc:catecholamine",
+  "name": "Catecholamine",
+  "members": [
+   "g:dopamine",
+   "g:epinephrine",
+   "g:norepinephrine"
+  ]
+ },
+ {
+  "class_id": "c:epc:central-nervous-system-stimulant",
+  "name": "Central Nervous System Stimulant",
+  "members": [
+   "g:caffeine",
+   "g:methylphenidate"
+  ]
+ },
+ {
+  "class_id": "c:epc:corticosteroid",
+  "name": "Corticosteroid",
+  "members": [
+   "g:budesonide",
+   "g:deflazacort",
+   "g:dexamethasone",
+   "g:fluocinonide",
+   "g:fluorometholone",
+   "g:hydrocortisone",
+   "g:methylprednisolone",
+   "g:mometasone",
+   "g:prednisolone",
+   "g:prednisone"
+  ]
+ },
+ {
+  "class_id": "c:epc:dihydropyridine-calcium-channel-blocker",
+  "name": "Dihydropyridine Calcium Channel Blocker",
+  "members": [
+   "g:amlodipine",
+   "g:felodipine",
+   "g:nifedipine",
+   "g:nimodipine"
+  ]
+ },
+ {
+  "class_id": "c:epc:estrogen",
+  "name": "Estrogen",
+  "members": [
+   "g:conjugated-estrogens",
+   "g:estradiol"
+  ]
+ },
+ {
+  "class_id": "c:epc:fluoroquinolone-antibacterial",
+  "name": "Fluoroquinolone Antibacterial",
+  "members": [
+   "g:ciprofloxacin",
+   "g:levofloxacin"
+  ]
+ },
+ {
+  "class_id": "c:epc:general-anesthetic",
+  "name": "General Anesthetic",
+  "members": [
+   "g:etomidate",
+   "g:isoflurane",
+   "g:propofol",
+   "g:sevoflurane"
+  ]
+ },
+ {
+  "class_id": "c:epc:glp-1-receptor-agonist",
+  "name": "GLP-1 Receptor Agonist",
+  "members": [
+   "g:dulaglutide",
+   "g:exenatide",
+   "g:liraglutide",
+   "g:semaglutide",
+   "g:tirzepatide"
+  ]
+ },
+ {
+  "class_id": "c:epc:gonadotropin",
+  "name": "Gonadotropin",
+  "members": [
+   "g:choriogonadotropin-alfa"
+  ]
+ },
+ {
+  "class_id": "c:epc:hmg-coa-reductase-inhibitor",
+  "name": "HMG-CoA Reductase Inhibitor",
+  "members": [
+   "g:atorvastatin",
+   "g:lovastatin",
+   "g:rosuvastatin",
+   "g:simvastatin"
+  ]
+ },
+ {
+  "class_id": "c:epc:insulin",
+  "name": "Insulin",
+  "members": [
+   "g:insulin-human"
+  ]
+ },
+ {
+  "class_id": "c:epc:kinase-inhibitor",
+  "name": "Kinase Inhibitor",
+  "members": [
+   "g:afatinib",
+   "g:axitinib",
+   "g:crizotinib",
+   "g:erlotinib",
+   "g:everolimus",
+   "g:gefitinib",
+   "g:ibrutinib",
+   "g:nilotinib",
+   "g:palbociclib",
+   "g:sorafenib",
+   "g:vemurafenib"
+  ]
+ },
+ {
+  "class_id": "c:epc:loop-diuretic",
+  "name": "Loop Diuretic",
+  "members": [
+   "g:bumetanide",
+   "g:furosemide",
+   "g:torsemide"
+  ]
+ },
+ {
+  "class_id": "c:epc:macrolide",
+  "name": "Macrolide",
+  "members": [
+   "g:erythromycin"
+  ]
+ },
+ {
+  "class_id": "c:epc:monoamine-oxidase-inhibitor",
+  "name": "Monoamine Oxidase Inhibitor",
+  "members": [
+   "g:selegiline"
+  ]
+ },
+ {
+  "class_id": "c:epc:muscle-relaxant",
+  "name": "Muscle Relaxant",
+  "members": [
+   "g:chlorzoxazone",
+   "g:methocarbamol"
+  ]
+ },
+ {
+  "class_id": "c:epc:nonsteroidal-anti-inflammatory-drug",
+  "name": "Nonsteroidal Anti-inflammatory Drug",
+  "members": [
+   "g:acetylsalicylic-acid",
+   "g:celecoxib",
+   "g:diclofenac",
+   "g:flurbiprofen",
+   "g:ibuprofen",
+   "g:indomethacin",
+   "g:ketoprofen",
+   "g:mefenamic-acid",
+   "g:meloxicam",
+   "g:naproxen",
+   "g:nepafenac",
+   "g:piroxicam"
+  ]
+ },
+ {
+  "class_id": "c:epc:opioid-agonist",
+  "name": "Opioid Agonist",
+  "members": [
+   "g:fentanyl",
+   "g:morphine",
+   "g:oxycodone"
+  ]
+ },
+ {
+  "class_id": "c:epc:oxytocic",
+  "name": "Oxytocic",
+  "members": [
+   "g:oxytocin"
+  ]
+ },
+ {
+  "class_id": "c:epc:parathyroid-hormone-analog",
+  "name": "Parathyroid Hormone Analog",
+  "members": [
+   "g:teriparatide"
+  ]
+ },
+ {
+  "class_id": "c:epc:phenothiazine",
+  "name": "Phenothiazine",
+  "members": [
+   "g:prochlorperazine"
+  ]
+ },
+ {
+  "class_id": "c:epc:platelet-aggregation-inhibitor",
+  "name": "Platelet Aggregation Inhibitor",
+  "members": [
+   "g:acetylsalicylic-acid",
+   "g:dipyridamole"
+  ]
+ },
+ {
+  "class_id": "c:epc:progestin",
+  "name": "Progestin",
+  "members": [
+   "g:etonogestrel",
+   "g:levonorgestrel",
+   "g:norethisterone"
+  ]
+ },
+ {
+  "class_id": "c:epc:progestin-antagonist",
+  "name": "Progestin Antagonist",
+  "members": [
+   "g:mifepristone"
+  ]
+ },
+ {
+  "class_id": "c:epc:prostaglandin-analog",
+  "name": "Prostaglandin Analog",
+  "members": [
+   "g:alprostadil",
+   "g:bimatoprost",
+   "g:dinoprostone",
+   "g:latanoprost",
+   "g:tafluprost",
+   "g:travoprost"
+  ]
+ },
+ {
+  "class_id": "c:epc:protease-inhibitor",
+  "name": "Protease Inhibitor",
+  "members": [
+   "g:darunavir",
+   "g:ritonavir"
+  ]
+ },
+ {
+  "class_id": "c:epc:proton-pump-inhibitor",
+  "name": "Proton Pump Inhibitor",
+  "members": [
+   "g:dexlansoprazole",
+   "g:esomeprazole",
+   "g:lansoprazole",
+   "g:omeprazole"
+  ]
+ },
+ {
+  "class_id": "c:epc:serotonin-reuptake-inhibitor",
+  "name": "Serotonin Reuptake Inhibitor",
+  "members": [
+   "g:citalopram",
+   "g:fluoxetine"
+  ]
+ },
+ {
+  "class_id": "c:epc:sodium-glucose-cotransporter-2-inhibitor",
+  "name": "Sodium-Glucose Cotransporter 2 Inhibitor",
+  "members": [
+   "g:dapagliflozin",
+   "g:empagliflozin"
+  ]
+ },
+ {
+  "class_id": "c:epc:somatostatin-analog",
+  "name": "Somatostatin Analog",
+  "members": [
+   "g:octreotide"
+  ]
+ },
+ {
+  "class_id": "c:epc:sulfonylurea",
+  "name": "Sulfonylurea",
+  "members": [
+   "g:glibenclamide",
+   "g:glimepiride",
+   "g:glipizide"
+  ]
+ },
+ {
+  "class_id": "c:epc:thiazide-diuretic",
+  "name": "Thiazide Diuretic",
+  "members": [
+   "g:chlorothiazide",
+   "g:hydrochlorothiazide"
+  ]
+ },
+ {
+  "class_id": "c:epc:thiazide-like-diuretic",
+  "name": "Thiazide-like Diuretic",
+  "members": [
+   "g:chlortalidone",
+   "g:indapamide",
+   "g:metolazone"
+  ]
+ },
+ {
+  "class_id": "c:epc:thiazolidinedione",
+  "name": "Thiazolidinedione",
+  "members": [
+   "g:pioglitazone"
+  ]
+ },
+ {
+  "class_id": "c:epc:vasoconstrictor",
+  "name": "Vasoconstrictor",
+  "members": [
+   "g:oxymetazoline"
+  ]
+ },
+ {
+  "class_id": "c:epc:vitamin-d-analog",
+  "name": "Vitamin D Analog",
+  "members": [
+   "g:calcipotriene"
+  ]
+ },
+ {
+  "class_id": "c:epc:xanthine-oxidase-inhibitor",
+  "name": "Xanthine Oxidase Inhibitor",
+  "members": [
+   "g:allopurinol",
+   "g:febuxostat"
+  ]
+ },
+ {
+  "class_id": "c:manual:alpha-blockers",
+  "name": "Alpha-blockers",
+  "members": [
+   "g:alfuzosin",
+   "g:doxazosin",
+   "g:prazosin",
+   "g:tamsulosin"
+  ]
+ },
+ {
+  "class_id": "c:manual:anticholinergics",
+  "name": "Anticholinergic drugs",
+  "members": [
+   "g:amitriptyline",
+   "g:atropine",
+   "g:chlorphenamine",
+   "g:glycopyrronium",
+   "g:hyoscine",
+   "g:ipratropium",
+   "g:promethazine",
+   "g:trihexyphenidyl"
+  ]
+ },
+ {
+  "class_id": "c:manual:anticoagulants",
+  "name": "Anticoagulants",
+  "members": [
+   "g:acenocoumarol",
+   "g:apixaban",
+   "g:dabigatran",
+   "g:enoxaparin",
+   "g:heparin",
+   "g:rivaroxaban",
+   "g:warfarin"
+  ]
+ },
+ {
+  "class_id": "c:manual:anticonvulsants",
+  "name": "Anticonvulsants",
+  "members": [
+   "g:carbamazepine",
+   "g:lamotrigine",
+   "g:levetiracetam",
+   "g:phenobarbital",
+   "g:phenytoin",
+   "g:topiramate",
+   "g:valproic-acid"
+  ]
+ },
+ {
+  "class_id": "c:manual:antidiabetics",
+  "name": "Antidiabetic agents",
+  "members": [
+   "g:dapagliflozin",
+   "g:empagliflozin",
+   "g:glibenclamide",
+   "g:gliclazide",
+   "g:glimepiride",
+   "g:glipizide",
+   "g:insulin",
+   "g:metformin",
+   "g:pioglitazone",
+   "g:sitagliptin"
+  ]
+ },
+ {
+  "class_id": "c:manual:antiplatelets",
+  "name": "Antiplatelet agents",
+  "members": [
+   "g:acetylsalicylic-acid",
+   "g:cilostazol",
+   "g:clopidogrel",
+   "g:dipyridamole",
+   "g:ticagrelor"
+  ]
+ },
+ {
+  "class_id": "c:manual:antipsychotics",
+  "name": "Antipsychotics",
+  "members": [
+   "g:aripiprazole",
+   "g:chlorpromazine",
+   "g:clozapine",
+   "g:fluphenazine",
+   "g:haloperidol",
+   "g:olanzapine",
+   "g:quetiapine",
+   "g:risperidone"
+  ]
+ },
+ {
+  "class_id": "c:manual:barbiturates",
+  "name": "Barbiturates",
+  "members": [
+   "g:phenobarbital",
+   "g:primidone",
+   "g:thiopental"
+  ]
+ },
+ {
+  "class_id": "c:manual:bleeding-risk",
+  "name": "Drugs that increase bleeding risk",
+  "members": [
+   "g:acetylsalicylic-acid",
+   "g:apixaban",
+   "g:celecoxib",
+   "g:citalopram",
+   "g:clopidogrel",
+   "g:dabigatran",
+   "g:diclofenac",
+   "g:enoxaparin",
+   "g:escitalopram",
+   "g:fluoxetine",
+   "g:heparin",
+   "g:ibuprofen",
+   "g:indometacin",
+   "g:ketorolac",
+   "g:meloxicam",
+   "g:naproxen",
+   "g:paroxetine",
+   "g:piroxicam",
+   "g:rivaroxaban",
+   "g:sertraline",
+   "g:ticagrelor",
+   "g:warfarin"
+  ]
+ },
+ {
+  "class_id": "c:manual:cns-depressants",
+  "name": "CNS depressants",
+  "members": [
+   "g:alprazolam",
+   "g:amitriptyline",
+   "g:bromazepam",
+   "g:chlorphenamine",
+   "g:chlorpromazine",
+   "g:clonazepam",
+   "g:codeine",
+   "g:diazepam",
+   "g:dihydrocodeine",
+   "g:diphenhydramine",
+   "g:fentanyl",
+   "g:gabapentin",
+   "g:haloperidol",
+   "g:ketamine",
+   "g:lorazepam",
+   "g:methadone",
+   "g:midazolam",
+   "g:morphine",
+   "g:nitrazepam",
+   "g:olanzapine",
+   "g:oxycodone",
+   "g:pentazocine",
+   "g:pethidine",
+   "g:phenobarbital",
+   "g:pregabalin",
+   "g:promethazine",
+   "g:propofol",
+   "g:quetiapine",
+   "g:thiopental",
+   "g:tramadol"
+  ]
+ },
+ {
+  "class_id": "c:manual:coumarin-anticoagulants",
+  "name": "Coumarin anticoagulants",
+  "members": [
+   "g:acenocoumarol",
+   "g:warfarin"
+  ]
+ },
+ {
+  "class_id": "c:manual:digitalis",
+  "name": "Digitalis glycosides",
+  "members": [
+   "g:digoxin"
+  ]
+ },
+ {
+  "class_id": "c:manual:diuretics",
+  "name": "Diuretics",
+  "members": [
+   "g:acetazolamide",
+   "g:amiloride",
+   "g:bendroflumethiazide",
+   "g:bumetanide",
+   "g:chlortalidone",
+   "g:furosemide",
+   "g:hydrochlorothiazide",
+   "g:indapamide",
+   "g:spironolactone",
+   "g:torsemide"
+  ]
+ },
+ {
+  "class_id": "c:manual:ergot-alkaloids",
+  "name": "Ergot alkaloids",
+  "members": [
+   "g:ergometrine",
+   "g:ergotamine",
+   "g:methylergometrine"
+  ]
+ },
+ {
+  "class_id": "c:manual:estrogens",
+  "name": "Estrogens",
+  "members": [
+   "g:conjugated-estrogens",
+   "g:estradiol",
+   "g:ethinylestradiol"
+  ]
+ },
+ {
+  "class_id": "c:manual:fibrates",
+  "name": "Fibrates",
+  "members": [
+   "g:fenofibrate"
+  ]
+ },
+ {
+  "class_id": "c:manual:immunosuppressants",
+  "name": "Immunosuppressants",
+  "members": [
+   "g:azathioprine",
+   "g:ciclosporin",
+   "g:methotrexate",
+   "g:mycophenolate-mofetil",
+   "g:tacrolimus"
+  ]
+ },
+ {
+  "class_id": "c:manual:iron-salts",
+  "name": "Iron salts",
+  "members": [
+   "g:ferrous-fumarate",
+   "g:ferrous-gluconate",
+   "g:ferrous-sulfate"
+  ]
+ },
+ {
+  "class_id": "c:manual:mao-inhibitors",
+  "name": "MAO inhibitors",
+  "members": [
+   "g:linezolid",
+   "g:methylthioninium-chloride",
+   "g:phenelzine",
+   "g:rasagiline",
+   "g:selegiline"
+  ]
+ },
+ {
+  "class_id": "c:manual:mixed-opioids",
+  "name": "Mixed agonist/antagonist and partial agonist opioids",
+  "members": [
+   "g:buprenorphine",
+   "g:pentazocine"
+  ]
+ },
+ {
+  "class_id": "c:manual:nephrotoxic",
+  "name": "Nephrotoxic drugs",
+  "members": [
+   "g:amikacin",
+   "g:amphotericin-b",
+   "g:celecoxib",
+   "g:ciclosporin",
+   "g:cisplatin",
+   "g:colistin",
+   "g:diclofenac",
+   "g:gentamicin",
+   "g:ibuprofen",
+   "g:indometacin",
+   "g:kanamycin",
+   "g:ketorolac",
+   "g:meloxicam",
+   "g:methotrexate",
+   "g:naproxen",
+   "g:piroxicam",
+   "g:streptomycin",
+   "g:tacrolimus",
+   "g:tenofovir",
+   "g:tobramycin",
+   "g:vancomycin"
+  ]
+ },
+ {
+  "class_id": "c:manual:neuromuscular-blockers",
+  "name": "Neuromuscular blocking agents",
+  "members": [
+   "g:atracurium",
+   "g:pancuronium",
+   "g:suxamethonium",
+   "g:vecuronium"
+  ]
+ },
+ {
+  "class_id": "c:manual:nitrates",
+  "name": "Nitrates",
+  "members": [
+   "g:glyceryl-trinitrate",
+   "g:isosorbide-dinitrate",
+   "g:isosorbide-mononitrate"
+  ]
+ },
+ {
+  "class_id": "c:manual:nsaids",
+  "name": "NSAIDs",
+  "members": [
+   "g:aceclofenac",
+   "g:acetylsalicylic-acid",
+   "g:celecoxib",
+   "g:diclofenac",
+   "g:etoricoxib",
+   "g:ibuprofen",
+   "g:indometacin",
+   "g:ketoprofen",
+   "g:ketorolac",
+   "g:mefenamic-acid",
+   "g:meloxicam",
+   "g:naproxen",
+   "g:piroxicam"
+  ]
+ },
+ {
+  "class_id": "c:manual:oral-contraceptives",
+  "name": "Oral contraceptives",
+  "members": [
+   "g:desogestrel",
+   "g:ethinylestradiol",
+   "g:levonorgestrel",
+   "g:medroxyprogesterone",
+   "g:norethisterone"
+  ]
+ },
+ {
+  "class_id": "c:manual:pde5-inhibitors",
+  "name": "PDE5 inhibitors",
+  "members": [
+   "g:sildenafil",
+   "g:tadalafil",
+   "g:vardenafil"
+  ]
+ },
+ {
+  "class_id": "c:manual:potassium-sparing-diuretics",
+  "name": "Potassium-sparing diuretics",
+  "members": [
+   "g:amiloride",
+   "g:spironolactone"
+  ]
+ },
+ {
+  "class_id": "c:manual:potassium-supplements",
+  "name": "Potassium supplements",
+  "members": [
+   "g:potassium-chloride",
+   "g:potassium-citrate"
+  ]
+ },
+ {
+  "class_id": "c:manual:progestogens",
+  "name": "Progestogens",
+  "members": [
+   "g:levonorgestrel",
+   "g:medroxyprogesterone",
+   "g:norethisterone",
+   "g:progesterone"
+  ]
+ },
+ {
+  "class_id": "c:manual:protease-inhibitors",
+  "name": "HIV protease inhibitors",
+  "members": [
+   "g:atazanavir",
+   "g:darunavir",
+   "g:indinavir",
+   "g:lopinavir",
+   "g:nelfinavir",
+   "g:ritonavir",
+   "g:saquinavir"
+  ]
+ },
+ {
+  "class_id": "c:manual:proton-pump-inhibitors",
+  "name": "Proton pump inhibitors",
+  "members": [
+   "g:esomeprazole",
+   "g:lansoprazole",
+   "g:omeprazole",
+   "g:pantoprazole",
+   "g:rabeprazole"
+  ]
+ },
+ {
+  "class_id": "c:manual:qt-prolonging",
+  "name": "QT-prolonging drugs",
+  "members": [
+   "g:amiodarone",
+   "g:arsenic-trioxide",
+   "g:azithromycin",
+   "g:bedaquiline",
+   "g:chloroquine",
+   "g:chlorpromazine",
+   "g:ciprofloxacin",
+   "g:citalopram",
+   "g:clarithromycin",
+   "g:delamanid",
+   "g:dolasetron",
+   "g:domperidone",
+   "g:erythromycin",
+   "g:escitalopram",
+   "g:fluconazole",
+   "g:haloperidol",
+   "g:hydroxychloroquine",
+   "g:levofloxacin",
+   "g:lumefantrine",
+   "g:methadone",
+   "g:moxifloxacin",
+   "g:ondansetron",
+   "g:pentamidine",
+   "g:pimozide",
+   "g:procainamide",
+   "g:quinidine",
+   "g:quinine",
+   "g:sotalol"
+  ]
+ },
+ {
+  "class_id": "c:manual:raas-antagonists",
+  "name": "Renin-angiotensin system antagonists",
+  "members": [
+   "g:candesartan",
+   "g:captopril",
+   "g:enalapril",
+   "g:irbesartan",
+   "g:lisinopril",
+   "g:losartan",
+   "g:perindopril",
+   "g:ramipril",
+   "g:telmisartan",
+   "g:valsartan"
+  ]
+ },
+ {
+  "class_id": "c:manual:serotonergic",
+  "name": "Serotonergic drugs",
+  "members": [
+   "g:amitriptyline",
+   "g:citalopram",
+   "g:clomipramine",
+   "g:duloxetine",
+   "g:escitalopram",
+   "g:fentanyl",
+   "g:fluoxetine",
+   "g:fluvoxamine",
+   "g:imipramine",
+   "g:linezolid",
+   "g:lithium-carbonate",
+   "g:methadone",
+   "g:methylthioninium-chloride",
+   "g:mirtazapine",
+   "g:ondansetron",
+   "g:paroxetine",
+   "g:pethidine",
+   "g:phenelzine",
+   "g:selegiline",
+   "g:sertraline",
+   "g:sumatriptan",
+   "g:tramadol",
+   "g:trazodone",
+   "g:venlafaxine"
+  ]
+ },
+ {
+  "class_id": "c:manual:snris",
+  "name": "SNRIs",
+  "members": [
+   "g:duloxetine",
+   "g:venlafaxine"
+  ]
+ },
+ {
+  "class_id": "c:manual:sympathomimetics",
+  "name": "Sympathomimetics",
+  "members": [
+   "g:dobutamine",
+   "g:dopamine",
+   "g:ephedrine",
+   "g:epinephrine",
+   "g:norepinephrine",
+   "g:phenylephrine",
+   "g:pseudoephedrine",
+   "g:salbutamol",
+   "g:terbutaline"
+  ]
+ },
+ {
+  "class_id": "c:manual:thiazide-diuretics",
+  "name": "Thiazide diuretics",
+  "members": [
+   "g:bendroflumethiazide",
+   "g:chlortalidone",
+   "g:hydrochlorothiazide",
+   "g:indapamide"
+  ]
+ },
+ {
+  "class_id": "c:manual:thyroid-hormones",
+  "name": "Thyroid hormones",
+  "members": [
+   "g:levothyroxine",
+   "g:liothyronine"
+  ]
+ },
+ {
+  "class_id": "c:manual:tricyclic-antidepressants",
+  "name": "Tricyclic antidepressants",
+  "members": [
+   "g:amitriptyline",
+   "g:clomipramine",
+   "g:dosulepin",
+   "g:doxepin",
+   "g:imipramine"
+  ]
+ },
+ {
+  "class_id": "c:manual:xanthines",
+  "name": "Xanthines",
+  "members": [
+   "g:aminophylline",
+   "g:caffeine",
+   "g:theophylline"
+  ]
+ },
+ {
+  "class_id": "c:moa:breast-cancer-resistance-protein-inhibitors",
+  "name": "Breast Cancer Resistance Protein Inhibitors",
+  "members": [
+   "g:itraconazole",
+   "g:ritonavir"
+  ]
+ },
+ {
+  "class_id": "c:moa:calcineurin-inhibitors",
+  "name": "Calcineurin Inhibitors",
+  "members": [
+   "g:ciclosporin"
+  ]
+ },
+ {
+  "class_id": "c:moa:calcium-channel-antagonists",
+  "name": "Calcium Channel Antagonists",
+  "members": [
+   "g:amlodipine",
+   "g:felodipine",
+   "g:nifedipine",
+   "g:nimodipine"
+  ]
+ },
+ {
+  "class_id": "c:moa:cytochrome-p450-2b6-inhibitors",
+  "name": "Cytochrome P450 2B6 Inhibitors",
+  "members": [
+   "g:crizotinib",
+   "g:fexinidazole",
+   "g:triclabendazole"
+  ]
+ },
+ {
+  "class_id": "c:moa:cytochrome-p450-2c19-inhibitors",
+  "name": "Cytochrome P450 2C19 Inhibitors",
+  "members": [
+   "g:efavirenz",
+   "g:esomeprazole",
+   "g:etravirine",
+   "g:fexinidazole",
+   "g:fluconazole",
+   "g:omeprazole",
+   "g:topiramate",
+   "g:triclabendazole",
+   "g:voriconazole"
+  ]
+ },
+ {
+  "class_id": "c:moa:cytochrome-p450-2c9-inducers",
+  "name": "Cytochrome P450 2C9 Inducers",
+  "members": [
+   "g:aprepitant",
+   "g:carbamazepine",
+   "g:enzalutamide",
+   "g:phenytoin",
+   "g:ritonavir"
+  ]
+ },
+ {
+  "class_id": "c:moa:cytochrome-p450-2c9-inhibitors",
+  "name": "Cytochrome P450 2C9 Inhibitors",
+  "members": [
+   "g:efavirenz",
+   "g:etravirine",
+   "g:fluconazole",
+   "g:ivacaftor",
+   "g:triclabendazole",
+   "g:voriconazole"
+  ]
+ },
+ {
+  "class_id": "c:moa:cytochrome-p450-2d6-inhibitors",
+  "name": "Cytochrome P450 2D6 Inhibitors",
+  "members": [
+   "g:darunavir",
+   "g:everolimus",
+   "g:fexinidazole",
+   "g:mirabegron",
+   "g:nilotinib",
+   "g:ranolazine",
+   "g:ritonavir",
+   "g:triclabendazole"
+  ]
+ },
+ {
+  "class_id": "c:moa:cytochrome-p450-3a4-inducers",
+  "name": "Cytochrome P450 3A4 Inducers",
+  "members": [
+   "g:aprepitant",
+   "g:carbamazepine",
+   "g:deferasirox",
+   "g:enzalutamide",
+   "g:topiramate"
+  ]
+ },
+ {
+  "class_id": "c:moa:cytochrome-p450-3a4-inhibitors",
+  "name": "Cytochrome P450 3A4 Inhibitors",
+  "members": [
+   "g:aprepitant",
+   "g:ciclosporin",
+   "g:clarithromycin",
+   "g:efavirenz",
+   "g:everolimus",
+   "g:fexinidazole",
+   "g:fluconazole",
+   "g:itraconazole",
+   "g:ketoconazole",
+   "g:perampanel",
+   "g:ritonavir",
+   "g:ticagrelor",
+   "g:voriconazole"
+  ]
+ },
+ {
+  "class_id": "c:moa:dihydrofolate-reductase-inhibitors",
+  "name": "Dihydrofolate Reductase Inhibitors",
+  "members": [
+   "g:lamotrigine",
+   "g:pyrimethamine",
+   "g:trimethoprim"
+  ]
+ },
+ {
+  "class_id": "c:moa:dopamine-agonists",
+  "name": "Dopamine Agonists",
+  "members": [
+   "g:ropinirole"
+  ]
+ },
+ {
+  "class_id": "c:moa:histamine-h2-receptor-antagonists",
+  "name": "Histamine H2 Receptor Antagonists",
+  "members": [
+   "g:cimetidine",
+   "g:famotidine",
+   "g:nizatidine",
+   "g:ranitidine"
+  ]
+ },
+ {
+  "class_id": "c:moa:mtor-inhibitors",
+  "name": "mTOR Inhibitors",
+  "members": [
+   "g:everolimus"
+  ]
+ },
+ {
+  "class_id": "c:moa:non-nucleoside-reverse-transcriptase-inhibitors",
+  "name": "Non-Nucleoside Reverse Transcriptase Inhibitors",
+  "members": [
+   "g:efavirenz",
+   "g:etravirine",
+   "g:nevirapine"
+  ]
+ },
+ {
+  "class_id": "c:moa:nucleoside-reverse-transcriptase-inhibitors",
+  "name": "Nucleoside Reverse Transcriptase Inhibitors",
+  "members": [
+   "g:emtricitabine",
+   "g:entecavir",
+   "g:lamivudine",
+   "g:zidovudine"
+  ]
+ },
+ {
+  "class_id": "c:moa:p-glycoprotein-inhibitors",
+  "name": "P-Glycoprotein Inhibitors",
+  "members": [
+   "g:ciclosporin",
+   "g:clarithromycin",
+   "g:crizotinib",
+   "g:etravirine",
+   "g:itraconazole",
+   "g:ivacaftor",
+   "g:ketoconazole",
+   "g:mirabegron",
+   "g:nilotinib",
+   "g:ranolazine",
+   "g:ritonavir",
+   "g:ticagrelor",
+   "g:vemurafenib",
+   "g:zonisamide"
+  ]
+ },
+ {
+  "class_id": "c:moa:ugt1a1-inhibitors",
+  "name": "UGT1A1 Inhibitors",
+  "members": [
+   "g:nilotinib"
+  ]
+ }
+]

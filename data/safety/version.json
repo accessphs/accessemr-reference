@@ -1,0 +1,63 @@
+{
+ "kb_version": "202610120316",
+ "curated_version": 1,
+ "counts": {
+  "before": {
+   "interaction": {
+    "minor": 419,
+    "moderate": 3358,
+    "serious": 1447
+   },
+   "pregnancy": {
+    "avoid": 151,
+    "caution": 231,
+    "contraindicated": 172,
+    "none": 54
+   },
+   "allergy_xr": {
+    "minor": 8,
+    "moderate": 85,
+    "serious": 284
+   }
+  },
+  "after": {
+   "interaction": {
+    "minor/notice": 396,
+    "moderate/notice": 3647,
+    "serious/alert": 927
+   },
+   "pregnancy": {
+    "moderate/notice": 334,
+    "serious/alert": 125
+   },
+   "allergy_xr": {
+    "moderate/alert": 3,
+    "moderate/notice": 33,
+    "serious/alert": 16
+   }
+  },
+  "dropped_by_reason": {
+   "interaction": {
+    "non_drug_partner": 76,
+    "not_a_substance": 72
+   },
+   "pregnancy": {
+    "no_status": 54,
+    "not_about_pregnancy": 36
+   },
+   "allergy_xr": {
+    "allergen_not_in_groups": 66,
+    "member_of_group": 80,
+    "not_cross_reactivity": 168
+   }
+  },
+  "alert_rules_before_review": 1715,
+  "review": {
+   "keep": 1071,
+   "drop": 176,
+   "downgrade": 468,
+   "unreviewed_alerts": 0
+  },
+  "alert_rules": 1071
+ }
+}

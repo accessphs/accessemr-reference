@@ -1192,6 +1192,48 @@
         }
       ]
     },
+    "irinotecan_clarithromycin_onc": {
+      "alerts": [
+        {
+          "rule_id": "ix:743b0cce214fad3c",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Irinotecan",
+          "other": "Clarithromycin",
+          "effect": "Raised irinotecan toxicity",
+          "action": "Do not combine",
+          "evidence": {
+            "quote": "Listed on the ONC high-priority drug-drug interaction list (Phansalkar et al., JAMIA 2012).",
+            "source": "Onc list",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "carbamazepine_ritonavir_onc": {
+      "alerts": [
+        {
+          "rule_id": "ix:cda1776e54ba8eb4",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Carbamazepine",
+          "other": "Ritonavir",
+          "effect": "Loss of antiretroviral efficacy",
+          "action": "Do not combine",
+          "evidence": {
+            "quote": "Listed on the ONC high-priority drug-drug interaction list (Phansalkar et al., JAMIA 2012).",
+            "source": "Onc list",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
     "valproate_pregnant": {
       "alerts": [
         {

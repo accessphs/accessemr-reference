@@ -841,6 +841,38 @@
   "pregnant": false
  },
  {
+  "id": "irinotecan_clarithromycin_onc",
+  "description": "Class rule whose evidence is the ONC high-priority list",
+  "drugs": [
+   {
+    "name": "Irinotecan"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Clarithromycin"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "carbamazepine_ritonavir_onc",
+  "description": "Class-to-class ONC rule (strong CYP3A inducer + protease inhibitor)",
+  "drugs": [
+   {
+    "name": "Carbamazepine"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Ritonavir"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
   "id": "valproate_pregnant",
   "description": "Sodium valproate in pregnancy",
   "drugs": [

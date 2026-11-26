@@ -59,6 +59,8 @@ CASES = [
     ('many_meds_patient', 'Patient on many medicines', [D('Ciprofloxacin')], [D('Warfarin'), D('Prednisolone'), D('Metformin'), D('Amlodipine'), D('Artemether/Lumefantrine'), D('Tramadol'), D('Theophylline')], [A('Penicillin'), A('Sulfa')], True),
     ('ceftriaxone_amoxicillin_allergen', 'Allergen recorded as a drug name (amoxicillin) maps to the penicillin group', [D('Ceftriaxone 1g Injection')], [], [A('Amoxicillin')], False),
     ('opioid_allergy_codeine', 'Opioid allergy group', [D('Codeine Phosphate')], [D('Alcohol')], [A('Morphine')], False),
+    ('irinotecan_clarithromycin_onc', 'Class rule whose evidence is the ONC high-priority list', [D('Irinotecan')], [D('Clarithromycin')], [], False),
+    ('carbamazepine_ritonavir_onc', 'Class-to-class ONC rule (strong CYP3A inducer + protease inhibitor)', [D('Carbamazepine')], [D('Ritonavir')], [], False),
     ('valproate_pregnant', 'Sodium valproate in pregnancy', [D('Sodium Valproate 200mg')], [D('Carbamazepine')], [], True),
 ]
 

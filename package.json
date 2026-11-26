@@ -23,14 +23,28 @@
     "./data/*": "./data/*",
     "./package.json": "./package.json"
   },
-  "typesVersions": { "*": { "node": ["./dist/esm/node.d.ts"] } },
+  "typesVersions": {
+    "*": {
+      "node": [
+        "./dist/esm/node.d.ts"
+      ]
+    }
+  },
   "sideEffects": false,
-  "files": ["dist", "data", "docs", "README.md", "CHANGELOG.md"],
-  "engines": { "node": ">=18" },
+  "files": [
+    "dist",
+    "data",
+    "docs",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && node scripts/postbuild.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "npm run build && node --test tests/",
+    "test": "npm run build && node --test \"tests/*.test.mjs\" \"tests/*.test.cjs\"",
     "build:data": "node scripts/build-data.mjs --core ../access-emr-core-safety",
     "check:data": "node scripts/build-data.mjs --core ../access-emr-core-safety --check"
   },

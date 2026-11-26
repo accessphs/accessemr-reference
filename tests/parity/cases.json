@@ -1,0 +1,859 @@
+[
+ {
+  "id": "warfarin_ibuprofen",
+  "description": "Serious interaction, generic pair",
+  "drugs": [
+   {
+    "name": "Ibuprofen"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Warfarin"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "warfarin_nsaid_class",
+  "description": "NSAID class partner of warfarin (diclofenac)",
+  "drugs": [
+   {
+    "name": "Diclofenac"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Warfarin"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "warfarin_naproxen_class",
+  "description": "Another NSAID against warfarin",
+  "drugs": [
+   {
+    "name": "Naproxen 500mg"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Warfarin 5mg"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "rifampicin_combination_plus",
+  "description": "Rifampicin + combination order \"Artemether + Lumefantrine\"",
+  "drugs": [
+   {
+    "name": "Rifampicin"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Artemether + Lumefantrine"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "rifampicin_combination_slash",
+  "description": "Combination order with slash and strength",
+  "drugs": [
+   {
+    "name": "Rifampicin"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Artemether/Lumefantrine",
+    "strength": "80mg/480mg"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "amatem_forte_brand",
+  "description": "Brand alias from drugs.csv resolves to the combination",
+  "drugs": [
+   {
+    "name": "Amatem Forte"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Rifampicin 600mg"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "coartem_strength_split",
+  "description": "Unknown brand, ingredients in the strength text",
+  "drugs": [
+   {
+    "name": "Coartem",
+    "strength": "artemether 20mg / lumefantrine 120mg"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Rifampicin"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "penicillin_amoxicillin",
+  "description": "Penicillin allergy blocks amoxicillin",
+  "drugs": [
+   {
+    "name": "Amoxicillin"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "Penicillin",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "pcn_amoxicillin",
+  "description": "\"PCN\" synonym",
+  "drugs": [
+   {
+    "name": "Amoxicillin 500mg Capsule"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "PCN",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "penicillin_ceftriaxone_cross",
+  "description": "Penicillin allergy, cephalosporin cross-reaction",
+  "drugs": [
+   {
+    "name": "Ceftriaxone"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "Penicillin",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "penicillin_meropenem_cross",
+  "description": "Penicillin allergy, carbapenem cross-reaction",
+  "drugs": [
+   {
+    "name": "Meropenem"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "penicillins",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "cephalosporin_amoxicillin_cross",
+  "description": "Cephalosporin allergy, penicillin cross-reaction",
+  "drugs": [
+   {
+    "name": "Amoxicillin"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "Cephalosporins",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "augmentin_penicillin",
+  "description": "Brand Augmentin with penicillin allergy",
+  "drugs": [
+   {
+    "name": "Augmentin"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "Penicillin",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "sulfa_cotrimoxazole",
+  "description": "Sulfa allergy blocks co-trimoxazole",
+  "drugs": [
+   {
+    "name": "Co-trimoxazole"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "Sulfa",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "sulpha_septrin",
+  "description": "\"sulpha\" spelling + brand Septrin",
+  "drugs": [
+   {
+    "name": "Septrin"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "sulpha",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "sulfa_glimepiride_kb",
+  "description": "Sulfa allergy, KB allergy_xr rule (no group membership)",
+  "drugs": [
+   {
+    "name": "Glimepiride"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "Sulfa",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "aspirin_allergy_ibuprofen",
+  "description": "Aspirin allergy and an NSAID",
+  "drugs": [
+   {
+    "name": "Ibuprofen"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "Aspirin",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "nsaid_allergy_aspirin",
+  "description": "NSAID allergy and aspirin",
+  "drugs": [
+   {
+    "name": "Aspirin"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "NSAIDs",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "aspirin_ibuprofen_interaction",
+  "description": "Aspirin with an NSAID currently taken",
+  "drugs": [
+   {
+    "name": "Aspirin 75mg"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Ibuprofen"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "misoprostol_pregnant",
+  "description": "Pregnancy contraindicated drug, pregnant",
+  "drugs": [
+   {
+    "name": "Misoprostol"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [],
+  "pregnant": true
+ },
+ {
+  "id": "misoprostol_not_pregnant",
+  "description": "Same drug, not pregnant",
+  "drugs": [
+   {
+    "name": "Misoprostol"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "isotretinoin_pregnant",
+  "description": "Pregnancy alert",
+  "drugs": [
+   {
+    "name": "Isotretinoin 20mg"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [],
+  "pregnant": true
+ },
+ {
+  "id": "efavirenz_pregnant_notice",
+  "description": "Pregnancy rule downgraded to a notice",
+  "drugs": [
+   {
+    "name": "Efavirenz"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [],
+  "pregnant": true
+ },
+ {
+  "id": "paracetamol_pregnant_notice",
+  "description": "Pregnancy notice for paracetamol",
+  "drugs": [
+   {
+    "name": "Paracetamol"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [],
+  "pregnant": true
+ },
+ {
+  "id": "metformin_alcohol",
+  "description": "Alcohol interaction notice",
+  "drugs": [
+   {
+    "name": "Metformin Hydrochloride 500mg Tablet"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Alcohol"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "fluconazole_warfarin_moderate",
+  "description": "Moderate pair gives a notice",
+  "drugs": [
+   {
+    "name": "Fluconazole"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Warfarin"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "unknown_drug",
+  "description": "Unresolvable drug gives nothing",
+  "drugs": [
+   {
+    "name": "Mystery tonic"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Warfarin"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "exact_allergy_name",
+  "description": "Legacy exact-name allergy match",
+  "drugs": [
+   {
+    "name": "Mystery tonic"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "Mystery tonic",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "direct_allergy_generic",
+  "description": "Direct generic match of the allergen",
+  "drugs": [
+   {
+    "name": "Warfarin 5mg"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "warfarin",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "duplicate_current_orders",
+  "description": "Two current orders with the same name collapse",
+  "drugs": [
+   {
+    "name": "Ibuprofen"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Warfarin"
+   },
+   {
+    "name": "Warfarin"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "two_candidates",
+  "description": "Interaction between two drugs in the same request",
+  "drugs": [
+   {
+    "name": "Warfarin"
+   },
+   {
+    "name": "Ibuprofen"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "two_candidates_reversed",
+  "description": "Same, reversed order",
+  "drugs": [
+   {
+    "name": "Ibuprofen"
+   },
+   {
+    "name": "Warfarin"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "sildenafil_nitrate",
+  "description": "Class-level interaction (nitrates)",
+  "drugs": [
+   {
+    "name": "Sildenafil"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Glyceryl trinitrate"
+   },
+   {
+    "name": "Isosorbide mononitrate"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "simvastatin_clarithromycin",
+  "description": "Generic pair + CYP3A class rule (ONC source)",
+  "drugs": [
+   {
+    "name": "Clarithromycin"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Simvastatin 40mg"
+   },
+   {
+    "name": "Amlodipine"
+   },
+   {
+    "name": "Metformin"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "ssri_maoi_onc",
+  "description": "ONC-list class pair",
+  "drugs": [
+   {
+    "name": "Fluoxetine"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Phenelzine"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "tramadol_ssri",
+  "description": "Class notice (serotonin reuptake inhibitor)",
+  "drugs": [
+   {
+    "name": "Tramadol"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Sertraline"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "food_allergy_ignored",
+  "description": "Non-drug allergy categories are ignored",
+  "drugs": [
+   {
+    "name": "Amoxicillin"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "Penicillin",
+    "category": "Food"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "blank_names_ignored",
+  "description": "Blank drug names are skipped",
+  "drugs": [
+   {
+    "name": "   "
+   },
+   {
+    "name": "Ibuprofen"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Warfarin"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "no_drugs",
+  "description": "No drugs gives an empty result",
+  "drugs": [],
+  "currentMeds": [
+   {
+    "name": "Warfarin"
+   }
+  ],
+  "allergies": [
+   {
+    "allergen": "Penicillin",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": true
+ },
+ {
+  "id": "whitespace_case",
+  "description": "Whitespace and case in names and allergen",
+  "drugs": [
+   {
+    "name": "  amoxicillin  "
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "  PENICILLIN ",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "multiple_allergies",
+  "description": "Two allergies, two drugs",
+  "drugs": [
+   {
+    "name": "Augmentin"
+   },
+   {
+    "name": "Septrin"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "Penicillin",
+    "category": "Drug"
+   },
+   {
+    "allergen": "Sulfa",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "combined_everything",
+  "description": "Interaction + pregnancy + allergy at once",
+  "drugs": [
+   {
+    "name": "Warfarin"
+   },
+   {
+    "name": "Ceftriaxone"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Ibuprofen"
+   },
+   {
+    "name": "Metronidazole"
+   }
+  ],
+  "allergies": [
+   {
+    "allergen": "Penicillin",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": true
+ },
+ {
+  "id": "lisinopril_ace_pregnant",
+  "description": "ACE inhibitor allergy + pregnancy",
+  "drugs": [
+   {
+    "name": "Lisinopril 10mg"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Spironolactone"
+   }
+  ],
+  "allergies": [
+   {
+    "allergen": "ACE inhibitors",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": true
+ },
+ {
+  "id": "potassium_spironolactone",
+  "description": "Moderate pair",
+  "drugs": [
+   {
+    "name": "Potassium Chloride"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Spironolactone"
+   }
+  ],
+  "allergies": [],
+  "pregnant": false
+ },
+ {
+  "id": "cotrimoxazole_methotrexate_and",
+  "description": "Combination written with \"and\"",
+  "drugs": [
+   {
+    "name": "Sulfamethoxazole and Trimethoprim"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Methotrexate"
+   }
+  ],
+  "allergies": [
+   {
+    "allergen": "sulfonamides",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "many_meds_patient",
+  "description": "Patient on many medicines",
+  "drugs": [
+   {
+    "name": "Ciprofloxacin"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Warfarin"
+   },
+   {
+    "name": "Prednisolone"
+   },
+   {
+    "name": "Metformin"
+   },
+   {
+    "name": "Amlodipine"
+   },
+   {
+    "name": "Artemether/Lumefantrine"
+   },
+   {
+    "name": "Tramadol"
+   },
+   {
+    "name": "Theophylline"
+   }
+  ],
+  "allergies": [
+   {
+    "allergen": "Penicillin",
+    "category": "Drug"
+   },
+   {
+    "allergen": "Sulfa",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": true
+ },
+ {
+  "id": "ceftriaxone_amoxicillin_allergen",
+  "description": "Allergen recorded as a drug name (amoxicillin) maps to the penicillin group",
+  "drugs": [
+   {
+    "name": "Ceftriaxone 1g Injection"
+   }
+  ],
+  "currentMeds": [],
+  "allergies": [
+   {
+    "allergen": "Amoxicillin",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "opioid_allergy_codeine",
+  "description": "Opioid allergy group",
+  "drugs": [
+   {
+    "name": "Codeine Phosphate"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Alcohol"
+   }
+  ],
+  "allergies": [
+   {
+    "allergen": "Morphine",
+    "category": "Drug"
+   }
+  ],
+  "pregnant": false
+ },
+ {
+  "id": "valproate_pregnant",
+  "description": "Sodium valproate in pregnancy",
+  "drugs": [
+   {
+    "name": "Sodium Valproate 200mg"
+   }
+  ],
+  "currentMeds": [
+   {
+    "name": "Carbamazepine"
+   }
+  ],
+  "allergies": [],
+  "pregnant": true
+ }
+]

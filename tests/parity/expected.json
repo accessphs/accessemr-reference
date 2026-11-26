@@ -1,0 +1,1234 @@
+{
+  "generated_by": "tools/parity/parity.rb (Medkb::SafetyCheck, AccessEMR core)",
+  "core_commit": "4ee294765db92c248893e07ebcf1c33fd8479e6e",
+  "loaded": {
+    "generics": 2516,
+    "drugs": 3160,
+    "catalogue_rows": 5482,
+    "rules": 5481,
+    "classes": 133
+  },
+  "cases": {
+    "warfarin_ibuprofen": {
+      "alerts": [
+        {
+          "rule_id": "ix:21f99a854b309b8b",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Ibuprofen",
+          "other": "Warfarin",
+          "effect": "Increased risk of bleeding when used with warfarin.",
+          "action": "Closely monitor patients receiving ibuprofen with warfarin.",
+          "evidence": {
+            "quote": "Examples of drugs known to increase the risk of bleeding are presented in Table 3.",
+            "source": "FDA label",
+            "set_id": "5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+            "section": "drug_interactions"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "warfarin_nsaid_class": {
+      "alerts": [
+        {
+          "rule_id": "ix:00a5e970d1008481",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Diclofenac",
+          "other": "Warfarin",
+          "effect": "Increased risk of serious bleeding compared to use of either drug alone.",
+          "action": "Monitor patients for signs of bleeding.",
+          "evidence": {
+            "quote": "Diclofenac and anticoagulants, such as warfarin, have a synergistic effect on bleeding.",
+            "source": "FDA label",
+            "set_id": "d9698809-4887-4514-aa28-0066355ef908",
+            "section": "drug_interactions"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "warfarin_naproxen_class": {
+      "alerts": [
+        {
+          "rule_id": "ix:f26d176495403933",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Naproxen 500mg",
+          "other": "Warfarin 5mg",
+          "effect": "Increased risk of serious bleeding compared to use of either drug alone.",
+          "action": "Monitor patients for signs of bleeding.",
+          "evidence": {
+            "quote": "The concomitant use of naproxen and anticoagulants have an increased risk of serious bleeding compared to the use of either drug alone.",
+            "source": "FDA label",
+            "set_id": "f6f4a670-235e-4235-84a8-a74dc8ca5586",
+            "section": "drug_interactions"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "rifampicin_combination_plus": {
+      "alerts": [
+        {
+          "rule_id": "ix:f5acaecd24e3c6c5",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Rifampicin",
+          "other": "Artemether + Lumefantrine",
+          "effect": "decreased concentrations of artemether and/or lumefantrine and loss of antimalarial efficacy",
+          "action": "avoid coadministration with strong CYP3A4 inducers",
+          "evidence": {
+            "quote": "Coadministration of strong inducers of CYP3A4 such as rifampin, carbamazepine, phenytoin, and St. John’s wort with Coartem Tablets can result in decreased concentrations of artemether and/or lumefantrine and loss of antimalarial efficacy",
+            "source": "FDA label",
+            "set_id": "7866ec19-dfac-47d4-a53f-511a12643cbf",
+            "section": "contraindications"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "rifampicin_combination_slash": {
+      "alerts": [
+        {
+          "rule_id": "ix:f5acaecd24e3c6c5",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Rifampicin",
+          "other": "Artemether/Lumefantrine",
+          "effect": "decreased concentrations of artemether and/or lumefantrine and loss of antimalarial efficacy",
+          "action": "avoid coadministration with strong CYP3A4 inducers",
+          "evidence": {
+            "quote": "Coadministration of strong inducers of CYP3A4 such as rifampin, carbamazepine, phenytoin, and St. John’s wort with Coartem Tablets can result in decreased concentrations of artemether and/or lumefantrine and loss of antimalarial efficacy",
+            "source": "FDA label",
+            "set_id": "7866ec19-dfac-47d4-a53f-511a12643cbf",
+            "section": "contraindications"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "amatem_forte_brand": {
+      "alerts": [
+        {
+          "rule_id": "ix:f5acaecd24e3c6c5",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Amatem Forte",
+          "other": "Rifampicin 600mg",
+          "effect": "decreased concentrations of artemether and/or lumefantrine and loss of antimalarial efficacy",
+          "action": "avoid coadministration with strong CYP3A4 inducers",
+          "evidence": {
+            "quote": "Coadministration of strong inducers of CYP3A4 such as rifampin, carbamazepine, phenytoin, and St. John’s wort with Coartem Tablets can result in decreased concentrations of artemether and/or lumefantrine and loss of antimalarial efficacy",
+            "source": "FDA label",
+            "set_id": "7866ec19-dfac-47d4-a53f-511a12643cbf",
+            "section": "contraindications"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "coartem_strength_split": {
+      "alerts": [
+        {
+          "rule_id": "ix:f5acaecd24e3c6c5",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Coartem",
+          "other": "Rifampicin",
+          "effect": "decreased concentrations of artemether and/or lumefantrine and loss of antimalarial efficacy",
+          "action": "avoid coadministration with strong CYP3A4 inducers",
+          "evidence": {
+            "quote": "Coadministration of strong inducers of CYP3A4 such as rifampin, carbamazepine, phenytoin, and St. John’s wort with Coartem Tablets can result in decreased concentrations of artemether and/or lumefantrine and loss of antimalarial efficacy",
+            "source": "FDA label",
+            "set_id": "7866ec19-dfac-47d4-a53f-511a12643cbf",
+            "section": "contraindications"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "penicillin_amoxicillin": {
+      "alerts": [
+        {
+          "rule_id": "ag:penicillins",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Amoxicillin",
+          "other": "Penicillin",
+          "effect": "Patient is allergic to penicillins and this drug is a penicillin.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "pcn_amoxicillin": {
+      "alerts": [
+        {
+          "rule_id": "ag:penicillins",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Amoxicillin 500mg Capsule",
+          "other": "PCN",
+          "effect": "Patient is allergic to penicillins and this drug is a penicillin.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "penicillin_ceftriaxone_cross": {
+      "alerts": [
+        {
+          "rule_id": "ag:penicillins:cephalosporins",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Ceftriaxone",
+          "other": "Penicillin",
+          "effect": "Cross-reactivity with cephalosporins is uncommon (about 1–2%), higher with cefalexin, cefadroxil and cefaclor. Use only if benefit outweighs risk and monitor.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "penicillin_meropenem_cross": {
+      "alerts": [
+        {
+          "rule_id": "ag:penicillins:carbapenems",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Meropenem",
+          "other": "penicillins",
+          "effect": "Cross-reactivity with carbapenems is possible (about 1%). Use only if benefit outweighs risk and monitor.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "cephalosporin_amoxicillin_cross": {
+      "alerts": [
+        {
+          "rule_id": "ag:cephalosporins:penicillins",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Amoxicillin",
+          "other": "Cephalosporins",
+          "effect": "Cross-reactivity with penicillins is possible. Use only if benefit outweighs risk and monitor.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "augmentin_penicillin": {
+      "alerts": [
+        {
+          "rule_id": "ag:penicillins",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Augmentin",
+          "other": "Penicillin",
+          "effect": "Patient is allergic to penicillins and this drug is a penicillin.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "sulfa_cotrimoxazole": {
+      "alerts": [
+        {
+          "rule_id": "ag:sulfonamide_antibiotics",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Co-trimoxazole",
+          "other": "Sulfa",
+          "effect": "Patient is allergic to sulfonamide (sulfa) antibiotics and this drug is a sulfonamide.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "sulpha_septrin": {
+      "alerts": [
+        {
+          "rule_id": "ag:sulfonamide_antibiotics",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Septrin",
+          "other": "sulpha",
+          "effect": "Patient is allergic to sulfonamide (sulfa) antibiotics and this drug is a sulfonamide.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "sulfa_glimepiride_kb": {
+      "alerts": [],
+      "notices": [
+        {
+          "rule_id": "xr:ae974ebc39582e90",
+          "kind": "allergy",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Glimepiride",
+          "other": "Sulfa",
+          "effect": "Patients who have developed an allergic reaction to sulfonamide derivatives may develop an allergic reaction to glimepiride tablets.",
+          "action": "Check the allergy history. Use only if benefit outweighs risk, and monitor.",
+          "evidence": {
+            "quote": "Patients who have developed an allergic reaction to sulfonamide derivatives may develop an allergic reaction to glimepiride tablets.",
+            "source": "FDA label",
+            "set_id": "fc9d8495-184c-3af1-e053-6394a90a5e29",
+            "section": "contraindications"
+          }
+        }
+      ]
+    },
+    "aspirin_allergy_ibuprofen": {
+      "alerts": [
+        {
+          "rule_id": "ag:aspirin:nsaids",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Ibuprofen",
+          "other": "Aspirin",
+          "effect": "People who react to aspirin may also react to other NSAIDs (cross-reactivity, including asthma and hives). Use only if benefit outweighs risk.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "nsaid_allergy_aspirin": {
+      "alerts": [
+        {
+          "rule_id": "ag:nsaids:aspirin",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Aspirin",
+          "other": "NSAIDs",
+          "effect": "People who react to NSAIDs may also react to aspirin (cross-reactivity, including asthma and hives). Use only if benefit outweighs risk.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "aspirin_ibuprofen_interaction": {
+      "alerts": [],
+      "notices": []
+    },
+    "misoprostol_pregnant": {
+      "alerts": [
+        {
+          "rule_id": "pg:g:misoprostol",
+          "kind": "pregnancy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Misoprostol",
+          "other": "Pregnancy",
+          "effect": "Misoprostol should not be taken by pregnant women to reduce the risk of ulcers induced by nonsteroidal anti-inflammatory drugs (NSAIDs).",
+          "action": "Avoid in pregnancy.",
+          "evidence": {
+            "quote": "Misoprostol should not be taken by pregnant women to reduce the risk of ulcers induced by nonsteroidal anti-inflammatory drugs (NSAIDs).",
+            "source": "FDA label",
+            "set_id": "c4fe14fb-0a43-4c31-9cd6-29eb0d156705",
+            "section": "contraindications"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "misoprostol_not_pregnant": {
+      "alerts": [],
+      "notices": []
+    },
+    "isotretinoin_pregnant": {
+      "alerts": [
+        {
+          "rule_id": "pg:g:isotretinoin",
+          "kind": "pregnancy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Isotretinoin 20mg",
+          "other": "Pregnancy",
+          "effect": "There is an extremely high risk that life-threatening birth defects will result if pregnancy occurs while taking Isotretinoin Capsules in any amount, even for short periods of time.",
+          "action": "Avoid in pregnancy.",
+          "evidence": {
+            "quote": "There is an extremely high risk that life-threatening birth defects will result if pregnancy occurs while taking Isotretinoin Capsules in any amount, even for short periods of time.",
+            "source": "FDA label",
+            "set_id": "c2917c3d-3499-48a0-ba53-120cb979195d",
+            "section": "boxed_warning"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "efavirenz_pregnant_notice": {
+      "alerts": [],
+      "notices": [
+        {
+          "rule_id": "pg:g:efavirenz",
+          "kind": "pregnancy",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Efavirenz",
+          "other": "Pregnancy",
+          "effect": "Because of the potential risk of neural tube defects, efavirenz should not be used in the first trimester of pregnancy.",
+          "action": "Avoid in pregnancy.",
+          "evidence": {
+            "quote": "Because of the potential risk of neural tube defects, efavirenz should not be used in the first trimester of pregnancy.",
+            "source": "FDA label",
+            "set_id": "13ca3456-e5bf-4bb1-af95-b1378658a358",
+            "section": "pregnancy"
+          }
+        }
+      ]
+    },
+    "paracetamol_pregnant_notice": {
+      "alerts": [],
+      "notices": [
+        {
+          "rule_id": "pg:g:paracetamol",
+          "kind": "pregnancy",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Paracetamol",
+          "other": "Pregnancy",
+          "effect": "8.1 Pregnancy Risk Summary Published epidemiological studies with oral acetaminophen use during pregnancy have not reported a clear association with acetaminophen use and birth defects, miscarriage, or adverse maternal or fetal outcomes [see Data] .",
+          "action": "Use with caution in pregnancy.",
+          "evidence": {
+            "quote": "8.1 Pregnancy Risk Summary Published epidemiological studies with oral acetaminophen use during pregnancy have not reported a clear association with acetaminophen use and birth defects, miscarriage, or adverse maternal or fetal outcomes [see Data] .",
+            "source": "FDA label",
+            "set_id": "464e404a-1957-44a2-a53a-f2a9d3c15bde",
+            "section": "pregnancy"
+          }
+        }
+      ]
+    },
+    "metformin_alcohol": {
+      "alerts": [],
+      "notices": [
+        {
+          "rule_id": "ix:3faa259a669c315d",
+          "kind": "interaction",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Metformin Hydrochloride 500mg Tablet",
+          "other": "Alcohol",
+          "effect": "can potentiate the effect of metformin on lactate metabolism.",
+          "action": "Warn patients against excessive alcohol intake.",
+          "evidence": {
+            "quote": "Alcohol is known to potentiate the effect of metformin on lactate metabolism.",
+            "source": "FDA label",
+            "set_id": "d5228e81-9c86-4781-b984-20feaa2ae779",
+            "section": "drug_interactions"
+          }
+        }
+      ]
+    },
+    "fluconazole_warfarin_moderate": {
+      "alerts": [],
+      "notices": [
+        {
+          "rule_id": "ix:2ff9480782220172",
+          "kind": "interaction",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Fluconazole",
+          "other": "Warfarin",
+          "effect": "Has the potential to increase the effect (increase INR) of warfarin.",
+          "action": "Closely monitor INR if a concomitant drug is a CYP2C9, 1A2, and/or 3A4 inhibitor or inducer.",
+          "evidence": {
+            "quote": "Inhibitors of CYP2C9, 1A2, and/or 3A4 have the potential to increase the effect (increase INR) of warfarin by increasing the exposure of warfarin.",
+            "source": "FDA label",
+            "set_id": "5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+            "section": "drug_interactions"
+          }
+        }
+      ]
+    },
+    "unknown_drug": {
+      "alerts": [],
+      "notices": []
+    },
+    "exact_allergy_name": {
+      "alerts": [
+        {
+          "rule_id": "ag:exact",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Mystery tonic",
+          "other": "Mystery tonic",
+          "effect": "Patient has a recorded allergy to Mystery tonic.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "direct_allergy_generic": {
+      "alerts": [
+        {
+          "rule_id": "ag:direct",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Warfarin 5mg",
+          "other": "warfarin",
+          "effect": "Patient has a recorded allergy to warfarin.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "duplicate_current_orders": {
+      "alerts": [
+        {
+          "rule_id": "ix:21f99a854b309b8b",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Ibuprofen",
+          "other": "Warfarin",
+          "effect": "Increased risk of bleeding when used with warfarin.",
+          "action": "Closely monitor patients receiving ibuprofen with warfarin.",
+          "evidence": {
+            "quote": "Examples of drugs known to increase the risk of bleeding are presented in Table 3.",
+            "source": "FDA label",
+            "set_id": "5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+            "section": "drug_interactions"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "two_candidates": {
+      "alerts": [
+        {
+          "rule_id": "ix:21f99a854b309b8b",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Warfarin",
+          "other": "Ibuprofen",
+          "effect": "Increased risk of bleeding when used with warfarin.",
+          "action": "Closely monitor patients receiving ibuprofen with warfarin.",
+          "evidence": {
+            "quote": "Examples of drugs known to increase the risk of bleeding are presented in Table 3.",
+            "source": "FDA label",
+            "set_id": "5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+            "section": "drug_interactions"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "two_candidates_reversed": {
+      "alerts": [
+        {
+          "rule_id": "ix:21f99a854b309b8b",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Ibuprofen",
+          "other": "Warfarin",
+          "effect": "Increased risk of bleeding when used with warfarin.",
+          "action": "Closely monitor patients receiving ibuprofen with warfarin.",
+          "evidence": {
+            "quote": "Examples of drugs known to increase the risk of bleeding are presented in Table 3.",
+            "source": "FDA label",
+            "set_id": "5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+            "section": "drug_interactions"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "sildenafil_nitrate": {
+      "alerts": [
+        {
+          "rule_id": "ix:de2c87489204eab8",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Sildenafil",
+          "other": "Glyceryl trinitrate",
+          "effect": "Potentiates the hypotensive effects of nitric oxide donors.",
+          "action": "Contraindicated with sildenafil tablets.",
+          "evidence": {
+            "quote": "Administration of sildenafil tablets to patients using nitric oxide donors, such as organic nitrates or organic nitrites in any form.",
+            "source": "FDA label",
+            "set_id": "878b4c44-cddc-42cb-b9b5-911451ad1530",
+            "section": "contraindications"
+          }
+        },
+        {
+          "rule_id": "ix:de2c87489204eab8",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Sildenafil",
+          "other": "Isosorbide mononitrate",
+          "effect": "Potentiates the hypotensive effects of nitric oxide donors.",
+          "action": "Contraindicated with sildenafil tablets.",
+          "evidence": {
+            "quote": "Administration of sildenafil tablets to patients using nitric oxide donors, such as organic nitrates or organic nitrites in any form.",
+            "source": "FDA label",
+            "set_id": "878b4c44-cddc-42cb-b9b5-911451ad1530",
+            "section": "contraindications"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "simvastatin_clarithromycin": {
+      "alerts": [
+        {
+          "rule_id": "ix:88cdf900bab80caa",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Clarithromycin",
+          "other": "Simvastatin 40mg",
+          "effect": "Increased risk of myopathy, including rhabdomyolysis.",
+          "action": "Avoid co-administration with clarithromycin.",
+          "evidence": {
+            "quote": "Concomitant administration of clarithromycin tablets with HMG-CoA reductase inhibitors (statins) that are extensively metabolized by CYP3A4 (lovastatin or simvastatin) is contraindicated, due to the increased risk of myopathy, including rhabdomyolysis [see Warnings and Precautions (5.4) and Drug Interactions (7) ] .",
+            "source": "FDA label",
+            "set_id": "9d5848f0-e9f0-4112-a7ca-bcc8ea2e69c6",
+            "section": "contraindications"
+          }
+        }
+      ],
+      "notices": [
+        {
+          "rule_id": "ix:916d1a57d1440051",
+          "kind": "interaction",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Clarithromycin",
+          "other": "Amlodipine",
+          "effect": "Increased systemic exposure to amlodipine; may require dose reduction.",
+          "action": "Monitor for symptoms of hypotension and edema; adjust dose if needed.",
+          "evidence": {
+            "quote": "Co-administration with CYP3A inhibitors (moderate and strong) results in increased systemic exposure to amlodipine and may require dose reduction.",
+            "source": "FDA label",
+            "set_id": "5af8493b-2b73-859c-e063-6394a90a4620",
+            "section": "drug_interactions"
+          }
+        }
+      ]
+    },
+    "ssri_maoi_onc": {
+      "alerts": [
+        {
+          "rule_id": "ix:8beab7addf1b51af",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Fluoxetine",
+          "other": "Phenelzine",
+          "effect": "increases the risk of serotonin syndrome",
+          "action": "monitor for signs and symptoms",
+          "evidence": {
+            "quote": "The concomitant use of serotonergic drugs (including other SSRIs, SNRIs, triptans, tricyclic antidepressants, opioids, lithium, buspirone, amphetamines, tryptophan, and St. John's Wort) with fluoxetine increases the risk of serotonin syndrome.",
+            "source": "FDA label",
+            "set_id": "a08dadff-f209-48dc-b597-6f085be13640",
+            "section": "drug_interactions"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "tramadol_ssri": {
+      "alerts": [
+        {
+          "rule_id": "ix:591ae8a5e12aece6",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Tramadol",
+          "other": "Sertraline",
+          "effect": "Risk of serotonin syndrome.",
+          "action": "Monitor for signs of serotonin syndrome.",
+          "evidence": {
+            "quote": "The concomitant use of opioids with other drugs that affect the serotonergic neurotransmitter system has resulted in serotonin syndrome.",
+            "source": "FDA label",
+            "set_id": "c6104e62-5b2c-41a1-afb3-00dcf267a384",
+            "section": "drug_interactions"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "food_allergy_ignored": {
+      "alerts": [],
+      "notices": []
+    },
+    "blank_names_ignored": {
+      "alerts": [
+        {
+          "rule_id": "ix:21f99a854b309b8b",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Ibuprofen",
+          "other": "Warfarin",
+          "effect": "Increased risk of bleeding when used with warfarin.",
+          "action": "Closely monitor patients receiving ibuprofen with warfarin.",
+          "evidence": {
+            "quote": "Examples of drugs known to increase the risk of bleeding are presented in Table 3.",
+            "source": "FDA label",
+            "set_id": "5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+            "section": "drug_interactions"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "no_drugs": {
+      "alerts": [],
+      "notices": []
+    },
+    "whitespace_case": {
+      "alerts": [
+        {
+          "rule_id": "ag:penicillins",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "amoxicillin",
+          "other": "PENICILLIN",
+          "effect": "Patient is allergic to penicillins and this drug is a penicillin.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "multiple_allergies": {
+      "alerts": [
+        {
+          "rule_id": "ag:penicillins",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Augmentin",
+          "other": "Penicillin",
+          "effect": "Patient is allergic to penicillins and this drug is a penicillin.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        },
+        {
+          "rule_id": "ag:sulfonamide_antibiotics",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Septrin",
+          "other": "Sulfa",
+          "effect": "Patient is allergic to sulfonamide (sulfa) antibiotics and this drug is a sulfonamide.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "combined_everything": {
+      "alerts": [
+        {
+          "rule_id": "ag:penicillins:cephalosporins",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Ceftriaxone",
+          "other": "Penicillin",
+          "effect": "Cross-reactivity with cephalosporins is uncommon (about 1–2%), higher with cefalexin, cefadroxil and cefaclor. Use only if benefit outweighs risk and monitor.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        },
+        {
+          "rule_id": "ix:21f99a854b309b8b",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Warfarin",
+          "other": "Ibuprofen",
+          "effect": "Increased risk of bleeding when used with warfarin.",
+          "action": "Closely monitor patients receiving ibuprofen with warfarin.",
+          "evidence": {
+            "quote": "Examples of drugs known to increase the risk of bleeding are presented in Table 3.",
+            "source": "FDA label",
+            "set_id": "5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+            "section": "drug_interactions"
+          }
+        },
+        {
+          "rule_id": "ix:64226c75c2323876",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Warfarin",
+          "other": "Metronidazole",
+          "effect": "Potentiation of anticoagulant effect, prolongation of prothrombin time.",
+          "action": "Monitor prothrombin time and INR carefully when prescribing metronidazole.",
+          "evidence": {
+            "quote": "Examples of inhibitors and inducers of CYP2C9, 1A2, and 3A4 are below in Table 2; however, this list should not be considered all-inclusive.",
+            "source": "FDA label",
+            "set_id": "5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+            "section": "drug_interactions"
+          }
+        },
+        {
+          "rule_id": "pg:g:warfarin",
+          "kind": "pregnancy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Warfarin",
+          "other": "Pregnancy",
+          "effect": "4 CONTRAINDICATIONS Warfarin sodium is contraindicated in: Pregnancy Warfarin sodium is contraindicated in women who are pregnant except in pregnant women with mechanical heart valves, who are at high risk of thromboembolism [see Warnings and Precautions (5.7) and Use in Specific Populations (8.1 )] .",
+          "action": "Avoid in pregnancy.",
+          "evidence": {
+            "quote": "4 CONTRAINDICATIONS Warfarin sodium is contraindicated in: Pregnancy Warfarin sodium is contraindicated in women who are pregnant except in pregnant women with mechanical heart valves, who are at high risk of thromboembolism [see Warnings and Precautions (5.7) and Use in Specific Populations (8.1 )] .",
+            "source": "FDA label",
+            "set_id": "5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+            "section": "contraindications"
+          }
+        }
+      ],
+      "notices": [
+        {
+          "rule_id": "pg:g:ceftriaxone",
+          "kind": "pregnancy",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Ceftriaxone",
+          "other": "Pregnancy",
+          "effect": "Because animal reproductive studies are not always predictive of human response, this drug should be used during pregnancy only if clearly needed.",
+          "action": "Use with caution in pregnancy.",
+          "evidence": {
+            "quote": "Because animal reproductive studies are not always predictive of human response, this drug should be used during pregnancy only if clearly needed.",
+            "source": "FDA label",
+            "set_id": "5cd2d96f-83e5-4326-ae87-d0ede4ba493a",
+            "section": "pregnancy"
+          }
+        }
+      ]
+    },
+    "lisinopril_ace_pregnant": {
+      "alerts": [
+        {
+          "rule_id": "ag:ace_inhibitors",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Lisinopril 10mg",
+          "other": "ACE inhibitors",
+          "effect": "Patient has a recorded allergy or angioedema with ACE inhibitors and this drug is an ACE inhibitor.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        },
+        {
+          "rule_id": "ix:b2877fae3cc571cf",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Lisinopril 10mg",
+          "other": "Spironolactone",
+          "effect": "Can increase the risk of hyperkalemia.",
+          "action": "Monitor the patient's serum potassium frequently.",
+          "evidence": {
+            "quote": "Potassium-sparing diuretics (spironolactone, amiloride, triamterene, and others) can increase the risk of hyperkalemia.",
+            "source": "FDA label",
+            "set_id": "aa5d68e7-c2b9-41eb-ade4-2cd57edc1533",
+            "section": "drug_interactions"
+          }
+        },
+        {
+          "rule_id": "pg:g:lisinopril",
+          "kind": "pregnancy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Lisinopril 10mg",
+          "other": "Pregnancy",
+          "effect": "When pregnancy is detected, discontinue lisinopril as soon as possible.",
+          "action": "Avoid in pregnancy.",
+          "evidence": {
+            "quote": "When pregnancy is detected, discontinue lisinopril as soon as possible.",
+            "source": "FDA label",
+            "set_id": "aa5d68e7-c2b9-41eb-ade4-2cd57edc1533",
+            "section": "boxed_warning"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "potassium_spironolactone": {
+      "alerts": [
+        {
+          "rule_id": "ix:8d9e349d9556a666",
+          "kind": "interaction",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Potassium Chloride",
+          "other": "Spironolactone",
+          "effect": "Can produce severe hyperkalemia.",
+          "action": "Avoid concomitant use.",
+          "evidence": {
+            "quote": "Use with potassium-sparing diuretics can produce severe hyperkalemia. Avoid concomitant use.",
+            "source": "FDA label",
+            "set_id": "ea55ded1-e076-43de-ad3c-c75e7d0a4ebc",
+            "section": "drug_interactions"
+          }
+        }
+      ],
+      "notices": []
+    },
+    "cotrimoxazole_methotrexate_and": {
+      "alerts": [
+        {
+          "rule_id": "ag:sulfonamide_antibiotics",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Sulfamethoxazole and Trimethoprim",
+          "other": "sulfonamides",
+          "effect": "Patient is allergic to sulfonamide (sulfa) antibiotics and this drug is a sulfonamide.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": [
+        {
+          "rule_id": "ix:881336cea89d435e",
+          "kind": "interaction",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Sulfamethoxazole and Trimethoprim",
+          "other": "Methotrexate",
+          "effect": "Increased risk of methotrexate severe adverse reactions.",
+          "action": "Monitor closely for methotrexate adverse reactions.",
+          "evidence": {
+            "quote": "If coadministration cannot be avoided, monitor closely for methotrexate adverse reactions when coadministered with",
+            "source": "FDA label",
+            "set_id": "dd035a9f-cd40-4314-b9d8-2294b8a924e2",
+            "section": "drug_interactions"
+          }
+        }
+      ]
+    },
+    "many_meds_patient": {
+      "alerts": [],
+      "notices": [
+        {
+          "rule_id": "ix:844fa00ac3456718",
+          "kind": "interaction",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Ciprofloxacin",
+          "other": "Warfarin",
+          "effect": "Anticoagulant effect enhanced.",
+          "action": "Monitor prothrombin time and INR frequently.",
+          "evidence": {
+            "quote": "Anti-coagulant drugs Use with caution (Increase in anticoagulant effect) The risk may vary with the underlying infection, age and general status of the patient so that the contribution of ciprofloxacin to the increase in INR (international normalized ratio) is difficult to assess.",
+            "source": "FDA label",
+            "set_id": "47d1e4c5-f669-4aca-9e8c-0d6bb833b859",
+            "section": "drug_interactions"
+          }
+        },
+        {
+          "rule_id": "ix:916d1a57d1440051",
+          "kind": "interaction",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Ciprofloxacin",
+          "other": "Amlodipine",
+          "effect": "Increased systemic exposure to amlodipine; may require dose reduction.",
+          "action": "Monitor for symptoms of hypotension and edema; adjust dose if needed.",
+          "evidence": {
+            "quote": "Co-administration with CYP3A inhibitors (moderate and strong) results in increased systemic exposure to amlodipine and may require dose reduction.",
+            "source": "FDA label",
+            "set_id": "5af8493b-2b73-859c-e063-6394a90a4620",
+            "section": "drug_interactions"
+          }
+        },
+        {
+          "rule_id": "ix:431ee1c04e758a0b",
+          "kind": "interaction",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Ciprofloxacin",
+          "other": "Artemether/Lumefantrine",
+          "effect": "Potential for additive QT effects; ECG monitoring advised.",
+          "action": "Use cautiously with Coartem Tablets.",
+          "evidence": {
+            "quote": "7.8 Interaction With Drugs That are Known to Prolong the QT Interval Coartem Tablets are to be used with caution when coadministered with drugs that may cause prolonged QT interval such as antiarrhythmics of Classes IA and III, neuroleptics and antidepressant agents, certain antibiotics including some agents of the following classes: macrolides, fluoroquinolones, imidazole, and triazole antifungal",
+            "source": "FDA label",
+            "set_id": "7866ec19-dfac-47d4-a53f-511a12643cbf",
+            "section": "drug_interactions"
+          }
+        },
+        {
+          "rule_id": "ix:e8452a42748d18fe",
+          "kind": "interaction",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Ciprofloxacin",
+          "other": "Tramadol",
+          "effect": "Increased tramadol exposure can lead to seizures and serotonin syndrome.",
+          "action": "Consider dosage reduction of tramadol until stable drug effects are achieved.",
+          "evidence": {
+            "quote": "Examples: Quinidine, fluoxetine, paroxetine and bupropion Inhibitors of CYP3A4 Clinical Impact: The concomitant use of tramadol hydrochloride tablets and CYP3A4 inhibitors can increase the plasma concentration of tramadol and may result in a greater amount of metabolism via CYP2D6 and greater levels of M1.",
+            "source": "FDA label",
+            "set_id": "c6104e62-5b2c-41a1-afb3-00dcf267a384",
+            "section": "drug_interactions"
+          }
+        },
+        {
+          "rule_id": "ix:7d2b132485ceceec",
+          "kind": "interaction",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Ciprofloxacin",
+          "other": "Theophylline",
+          "effect": "Increased risk of CNS or other adverse reactions.",
+          "action": "If use cannot be avoided, monitor serum levels and adjust dosage.",
+          "evidence": {
+            "quote": "Concurrent administration of ciprofloxacin with theophylline may result in increased risk of a patient developing central nervous system (CNS) or other adverse reactions.",
+            "source": "FDA label",
+            "set_id": "47d1e4c5-f669-4aca-9e8c-0d6bb833b859",
+            "section": "drug_interactions"
+          }
+        },
+        {
+          "rule_id": "pg:g:ciprofloxacin",
+          "kind": "pregnancy",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Ciprofloxacin",
+          "other": "Pregnancy",
+          "effect": "However, these small postmarketing epidemiology studies, of which most experience is from short term, first trimester exposure, are insufficient to evaluate the risk for less common defects or to permit reliable and definitive conclusions regarding the safety of ciprofloxacin in pregnant women and their developing fetuses.",
+          "action": "Use with caution in pregnancy.",
+          "evidence": {
+            "quote": "However, these small postmarketing epidemiology studies, of which most experience is from short term, first trimester exposure, are insufficient to evaluate the risk for less common defects or to permit reliable and definitive conclusions regarding the safety of ciprofloxacin in pregnant women and their developing fetuses.",
+            "source": "FDA label",
+            "set_id": "47d1e4c5-f669-4aca-9e8c-0d6bb833b859",
+            "section": "pregnancy"
+          }
+        }
+      ]
+    },
+    "ceftriaxone_amoxicillin_allergen": {
+      "alerts": [
+        {
+          "rule_id": "ag:penicillins:cephalosporins",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Ceftriaxone 1g Injection",
+          "other": "Amoxicillin",
+          "effect": "Cross-reactivity with cephalosporins is uncommon (about 1–2%), higher with cefalexin, cefadroxil and cefaclor. Use only if benefit outweighs risk and monitor.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": []
+    },
+    "opioid_allergy_codeine": {
+      "alerts": [
+        {
+          "rule_id": "ag:opioids",
+          "kind": "allergy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Codeine Phosphate",
+          "other": "Morphine",
+          "effect": "Patient is allergic to opioids and this drug is an opioid.",
+          "action": "Avoid unless the benefit outweighs the risk; if used, monitor for a reaction.",
+          "evidence": {
+            "quote": null,
+            "source": "Allergy group (AccessEMR)",
+            "set_id": null,
+            "section": null
+          }
+        }
+      ],
+      "notices": [
+        {
+          "rule_id": "ix:99fe880c153a8776",
+          "kind": "interaction",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Codeine Phosphate",
+          "other": "Alcohol",
+          "effect": "Concomitant use may result in profound sedation, respiratory depression, coma, and death.",
+          "action": "Reserve concomitant prescribing for use in patients for whom alternative treatment options are inadequate.",
+          "evidence": {
+            "quote": "Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+            "source": "FDA label",
+            "set_id": "5819bdf7-300e-45b8-8f3a-447b53656293",
+            "section": "boxed_warning"
+          }
+        }
+      ]
+    },
+    "valproate_pregnant": {
+      "alerts": [
+        {
+          "rule_id": "pg:g:valproic-acid",
+          "kind": "pregnancy",
+          "severity": "serious",
+          "level": "alert",
+          "drug": "Sodium Valproate 200mg",
+          "other": "Pregnancy",
+          "effect": "For use in prophylaxis of migraine headaches: Valproic acid is contraindicated in women who are pregnant and in women of childbearing potential who are not using effective contraception [see Warnings and Precautions ( 5.2 , 5.3 , 5.4 ) and Use in Specific Populations ( 8.1 )] .",
+          "action": "Avoid in pregnancy.",
+          "evidence": {
+            "quote": "For use in prophylaxis of migraine headaches: Valproic acid is contraindicated in women who are pregnant and in women of childbearing potential who are not using effective contraception [see Warnings and Precautions ( 5.2 , 5.3 , 5.4 ) and Use in Specific Populations ( 8.1 )] .",
+            "source": "FDA label",
+            "set_id": "1edd220d-d151-4177-9a29-9fee36489fb7",
+            "section": "contraindications"
+          }
+        }
+      ],
+      "notices": [
+        {
+          "rule_id": "ix:05796501d0ac864a",
+          "kind": "interaction",
+          "severity": "moderate",
+          "level": "notice",
+          "drug": "Sodium Valproate 200mg",
+          "other": "Carbamazepine",
+          "effect": "increased carbamazepine-10,11 epoxide plasma concentrations",
+          "action": "adjust dosage and/or monitor plasma levels",
+          "evidence": {
+            "quote": "Accordingly, the dosage of carbamazepine extended-release capsules should be adjusted and/or the plasma levels monitored when used concomitantly with loxapine, quetiapine, or valproic acid.",
+            "source": "FDA label",
+            "set_id": "e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+            "section": "drug_interactions"
+          }
+        }
+      ]
+    }
+  }
+}

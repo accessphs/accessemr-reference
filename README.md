@@ -114,7 +114,8 @@ Notes:
 - Create the engine once and reuse it. Building it indexes the data (about 35 ms on a desktop in Node; expect
   several times that on a low-end phone). Each `check()` then takes well under a millisecond on a desktop.
 - The regular expressions use lookahead only and no Unicode property escapes, so they run on Hermes.
-- TypeScript: enable `resolveJsonModule` to import the JSON files.
+- TypeScript: enable `resolveJsonModule` to import the JSON files. Bundlers (Metro, Vite, webpack) import JSON as
+  shown; plain Node ESM needs `import rules from '.../rules.json' with { type: 'json' }` (or use `loadDefaultData()`).
 
 ## Python and other languages
 

@@ -26,10 +26,10 @@ cp tests/parity/cases.json "$CORE/tmp/parity_cases.json"
 cp tools/parity/parity.rb  "$CORE/tmp/parity.rb"
 git -C "$CORE" rev-parse HEAD > "$CORE/tmp/parity_commit.txt"
 
-# The Docker test wrapper used on 2026-11-26 (mounts the core checkout at /rails, test database):
+# Example Docker test wrapper (mounts the core checkout at /rails, test database):
 MSYS_NO_PATHCONV=1 docker run --rm --network access-emr-core-paeds_default \
-  -v "D:/projects/accessehr/access-emr-core-safety:/rails" -w /rails \
-  --env-file D:/projects/accessehr/access-emr-core-safety/.env \
+  -v "$(pwd -W 2>/dev/null || pwd)/$CORE:/rails" -w /rails \
+  --env-file "$CORE/.env" \
   -e RAILS_ENV=test -e DATABASE_URL=postgres://postgres:password@db/access_emr_core_test \
   --entrypoint "" access-emr-core-web bash -c "ruby bin/rails runner -e test /rails/tmp/parity.rb"
 

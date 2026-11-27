@@ -1,11 +1,11 @@
 {
   "name": "@accessphs/accessemr-reference data",
-  "data_version": "2026.11.26",
-  "build_date": "2026-11-26",
+  "data_version": "2026.11.27",
+  "build_date": "2026-11-27",
   "source": {
     "repository": "AccessEMR core (access-emr-core)",
-    "commit": "597f1ceb35a5e119b6fa1af4efee75bc94fd1a4f",
-    "commit_date": "2026-11-26T18:35:25-05:00"
+    "commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
+    "commit_date": "2026-11-27T00:12:26-05:00"
   },
   "upstream": {
     "medkb_dose_defaults_generated_at": "2026-10-12T03:05:07+00:00",
@@ -14,7 +14,9 @@
     "safety_kb_version": "202610120316",
     "safety_curated_version": 1,
     "allergy_groups_version": 1,
-    "common_labs_version": 1
+    "common_labs_version": 1,
+    "procedures_version": "2026.11.26",
+    "procedures_status": "draft"
   },
   "datasets": [
     {
@@ -38,7 +40,7 @@
     {
       "file": "medications/drugs.csv",
       "source": "db/data/medkb/drugs.csv",
-      "source_commit": "597f1ceb35a5e119b6fa1af4efee75bc94fd1a4f",
+      "source_commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
       "source_last_changed": "597f1ceb35a5e119b6fa1af4efee75bc94fd1a4f",
       "records": 5482,
       "bytes": 1560264,
@@ -56,7 +58,7 @@
     {
       "file": "medications/generics.json",
       "source": "db/data/medkb/generics_flags.json",
-      "source_commit": "597f1ceb35a5e119b6fa1af4efee75bc94fd1a4f",
+      "source_commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
       "source_last_changed": "7b7cec4cc0ce1af9e5a2c7e30af72dbcd1acd6d5",
       "records": 2516,
       "bytes": 281505,
@@ -65,7 +67,7 @@
     {
       "file": "medications/dose_defaults.json",
       "source": "db/data/medkb/dose_defaults.json",
-      "source_commit": "597f1ceb35a5e119b6fa1af4efee75bc94fd1a4f",
+      "source_commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
       "source_last_changed": "7b7cec4cc0ce1af9e5a2c7e30af72dbcd1acd6d5",
       "records": 818,
       "bytes": 855416,
@@ -74,7 +76,7 @@
     {
       "file": "labs/catalog_tests.csv",
       "source": "db/data/labkb/catalog_tests.csv",
-      "source_commit": "597f1ceb35a5e119b6fa1af4efee75bc94fd1a4f",
+      "source_commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
       "source_last_changed": "cb220f0a1bb7540d430761cfcc51add12db91e58",
       "records": 759,
       "bytes": 140606,
@@ -83,7 +85,7 @@
     {
       "file": "labs/catalog_analytes.csv",
       "source": "db/data/labkb/catalog_analytes.csv",
-      "source_commit": "597f1ceb35a5e119b6fa1af4efee75bc94fd1a4f",
+      "source_commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
       "source_last_changed": "5a460f15761b1a114b5959d26366bad4848796a3",
       "records": 1132,
       "bytes": 208436,
@@ -92,7 +94,7 @@
     {
       "file": "labs/common.json",
       "source": "db/data/labkb/common.yml (converted from YAML)",
-      "source_commit": "597f1ceb35a5e119b6fa1af4efee75bc94fd1a4f",
+      "source_commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
       "source_last_changed": "bacc8478f324fd2a0ee333c6b45c9d61a58febe7",
       "records": {
         "common_tests": 43,
@@ -104,7 +106,7 @@
     {
       "file": "safety/rules.json",
       "source": "db/data/medkb/safety/rules.json",
-      "source_commit": "597f1ceb35a5e119b6fa1af4efee75bc94fd1a4f",
+      "source_commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
       "source_last_changed": "cad44d0205b6890e6f365f88a4a5a92d5e2a7ef7",
       "records": 5481,
       "bytes": 4136747,
@@ -113,7 +115,7 @@
     {
       "file": "safety/classes.json",
       "source": "db/data/medkb/safety/classes.json",
-      "source_commit": "597f1ceb35a5e119b6fa1af4efee75bc94fd1a4f",
+      "source_commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
       "source_last_changed": "cad44d0205b6890e6f365f88a4a5a92d5e2a7ef7",
       "records": 133,
       "bytes": 28524,
@@ -122,7 +124,7 @@
     {
       "file": "safety/allergy_groups.json",
       "source": "db/data/medkb/safety/allergy_groups.yml (converted from YAML)",
-      "source_commit": "597f1ceb35a5e119b6fa1af4efee75bc94fd1a4f",
+      "source_commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
       "source_last_changed": "cad44d0205b6890e6f365f88a4a5a92d5e2a7ef7",
       "records": 15,
       "bytes": 15498,
@@ -131,11 +133,29 @@
     {
       "file": "safety/version.json",
       "source": "db/data/medkb/safety/version.json",
-      "source_commit": "597f1ceb35a5e119b6fa1af4efee75bc94fd1a4f",
+      "source_commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
       "source_last_changed": "cad44d0205b6890e6f365f88a4a5a92d5e2a7ef7",
       "records": null,
       "bytes": 1186,
       "sha256": "47399cecd4c20860ff97680bd958ff2ae809c019fe4d24b8d7f7cea69474991b"
+    },
+    {
+      "file": "procedures/procedures.json",
+      "source": "db/data/procedures (YAML files, one per specialty, converted; option sets expanded)",
+      "source_commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
+      "source_last_changed": "f4a0600601002d6656b1de4978b3807c4006a4f6",
+      "records": 1015,
+      "bytes": 3350590,
+      "sha256": "889d69ed06c59b69d42eb1047793515b53f8d9aef2ac38cda8720b1a90760793"
+    },
+    {
+      "file": "procedures/version.json",
+      "source": "db/data/procedures/version.json",
+      "source_commit": "f4a0600601002d6656b1de4978b3807c4006a4f6",
+      "source_last_changed": "f4a0600601002d6656b1de4978b3807c4006a4f6",
+      "records": null,
+      "bytes": 277,
+      "sha256": "874d585068fb9da1200858feb595af4353ab0e5e98a1cd414f0e04b54cec69db"
     }
   ]
 }

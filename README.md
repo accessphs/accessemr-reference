@@ -10,18 +10,22 @@
      the default lab panels
    - the drug-safety rules: 5,481 rules (interactions, pregnancy, allergy cross-reactions), 133 drug classes and
      15 allergy groups
+   - the procedures library: 1,015 procedures in 25 specialties, each with a short guide (indications, equipment,
+     steps, aftercare, red flags) and a record form (draft content, see below)
 2. **A drug-safety engine** (`src/`, built to `dist/`): a TypeScript port of the check AccessEMR runs when a
    doctor prescribes. Give it the drugs being prescribed, the patient's current medicines, drug allergies and
    pregnancy status; it returns **alerts** (serious, should interrupt) and **notices** (quieter). It has no
    runtime dependencies and runs in Node, browsers and React Native. It runs entirely on your device or server:
    **no patient data is sent anywhere**.
-3. **Search helpers** for the ICD-10 list and the drug list (prefix and substring, brand names included).
+3. **Search helpers** for the ICD-10 list, the drug list and the procedures library (prefix and substring,
+   brand names and synonyms included).
 
 The engine is tested against AccessEMR's own Ruby engine: 53 golden cases give identical output
 (`tests/parity/`).
 
 > Clinical decision support only. The prescriber stays responsible for every prescribing decision. The data
-> was curated with AI assistance and has not been reviewed by a clinician. See
+> was curated with AI assistance and has not been reviewed by a clinician. The procedures library is marked
+> draft until our clinical lead signs it off. See
 > [docs/SOURCES-AND-TERMS.md](docs/SOURCES-AND-TERMS.md).
 
 ## What's where
@@ -43,7 +47,7 @@ The engine is tested against AccessEMR's own Ruby engine: 53 golden cases give i
 The package is not published to npm. Install it from the tarball we sent you:
 
 ```bash
-npm install ./accessphs-accessemr-reference-1.0.1.tgz
+npm install ./accessphs-accessemr-reference-1.1.0.tgz
 ```
 
 Or unzip the source archive, run `npm install && npm run build`, and install from the folder.
@@ -77,6 +81,11 @@ import {
   loadIcd10,       // data/icd10/icd10_codes.json as an array
   searchIcd10,     // searchIcd10('malaria', 10), searchIcd10('B50.9'), searchIcd10('b509')
   searchDrugs,     // searchDrugs('amatem', 10) → Artemether + Lumefantrine (matched alias "AMATEM")
+  loadProcedures,  // data/procedures/procedures.json as an array
+  searchProcedures,         // searchProcedures('LP', 10), searchProcedures('PRC-OBS'),
+                            // searchProcedures('', 50, { specialty: 'neonatal', paediatric: true })
+  getProcedure,             // getProcedure('PRC-MED-001') → Lumbar puncture, with its guide and form
+  listProcedureSpecialties, // [{ key: 'anaesthesia', name: 'Anaesthesia', procedures: 35 }, ...]
 } from '@accessphs/accessemr-reference/node';
 
 engine.resolve('Augmentin');  // → ['g:amoxicillin', 'g:clavulanic-acid'] (MedKB generic ids)
@@ -97,17 +106,20 @@ import rules from '@accessphs/accessemr-reference/data/safety/rules.json';
 import classes from '@accessphs/accessemr-reference/data/safety/classes.json';
 import allergyGroups from '@accessphs/accessemr-reference/data/safety/allergy_groups.json';
 import icd10 from '@accessphs/accessemr-reference/data/icd10/icd10_codes.json';
+import procedures from '@accessphs/accessemr-reference/data/procedures/procedures.json';
 
 const engine = createSafetyEngine({ generics, drugs, rules, classes, allergyGroups });
-const search = createSearch({ icd10, drugs });
+const search = createSearch({ icd10, drugs, procedures });
 
 engine.check({ drugs: [{ name: 'Amoxicillin' }], allergies: [{ allergen: 'Penicillin' }] });
 search.searchIcd10('typhoid', 10);
+search.searchProcedures('incision and drainage', 10); // → PRC-SURG-001 ...
+search.procedure('PRC-SURG-001');                      // one procedure by code
 ```
 
 Notes:
 - The safety files together are about 6.2 MB of JSON (about 0.9 MB gzipped); the ICD-10 JSON is another 5.9 MB
-  (0.7 MB gzipped). In a
+  (0.7 MB gzipped), and the procedures JSON 3.4 MB (0.7 MB gzipped). In a
   web app, consider loading them with `fetch()` (or a dynamic `import()`) after first paint, and caching them.
   In React Native, Metro bundles imported JSON into the app; if app size matters, download the files on first run
   and keep them in local storage, then call `createSafetyEngine` with the parsed objects.

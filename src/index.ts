@@ -8,6 +8,11 @@ export type { IndexedGeneric } from './genericIndex.js';
 export { AllergyGroups } from './allergyGroups.js';
 export type { AllergyGroup } from './allergyGroups.js';
 export { normalise, withoutSalt, isCombination } from './name.js';
-export { createSearch, searchIcd10Records, searchDrugRecords, parseCsv, parseIcd10Csv } from './search.js';
-export type { Icd10Record, Icd10SearchResult, DrugSearchResult, SearchData } from './search.js';
+export {
+  createSearch, searchIcd10Records, searchDrugRecords, searchProcedureRecords, findProcedure, procedureSpecialties,
+  parseCsv, parseIcd10Csv,
+} from './search.js';
+export type {
+  Icd10Record, Icd10SearchResult, DrugSearchResult, ProcedureSearchResult, ProcedureSearchOptions, SearchData,
+} from './search.js';
 export type * from './types.js';

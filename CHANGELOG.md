@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.1.0 (2026-11-27)
+
+**Data** (data version 2026.11.27, AccessEMR core commit `f4a06006`):
+- New: the procedures library, `data/procedures/procedures.json` (1,015 procedures in 25 specialties) and
+  `data/procedures/version.json`. Each procedure has a stable code (`PRC-MED-001`), synonyms, a paediatric flag,
+  the usual consent, a short guide (indications, contraindications, equipment, steps, aftercare, red flags) and
+  a record form in the same field format AccessEMR uses. Draft content: clinical sign-off is pending.
+  Fields in docs/DATA.md.
+- `data/version.json` adds `procedures_version` and `procedures_status`. No other file changed.
+
+**Helpers:**
+- `searchProcedureRecords`, `findProcedure`, `procedureSpecialties`; `createSearch({ procedures })` adds
+  `searchProcedures(query, limit, { specialty, paediatric })` and `procedure(code)`.
+- Node: `loadProcedures`, `searchProcedures`, `getProcedure`, `listProcedureSpecialties`.
+- Nothing existing changed: the safety engine and its parity results (53/53) are the same as 1.0.1.
+
 ## 1.0.1 (2026-11-26)
 
 **Data** (AccessEMR core commit `597f1ceb`):

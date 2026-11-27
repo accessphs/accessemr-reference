@@ -4,7 +4,7 @@ All files are UTF-8. CSV files follow RFC 4180 (comma separated, double-quoted f
 row, `\n` line endings). Some CSV columns hold a JSON value (an array or object) as text; these are noted below.
 `data/version.json` lists every file with its source, record count, size and SHA-256.
 
-Counts below are for data version 2026.11.26 (AccessEMR core commit `4ee29476`).
+Counts below are for data version 2026.11.27 (AccessEMR core commit `f4a06006`); procedures added in 1.1.0.
 
 | File | Records | What |
 | --- | ---: | --- |
@@ -21,6 +21,8 @@ Counts below are for data version 2026.11.26 (AccessEMR core commit `4ee29476`).
 | `safety/classes.json` | 133 | Drug classes used by the rules |
 | `safety/allergy_groups.json` | 15 | Allergy groups (penicillins, sulfa, NSAIDs, ...) |
 | `safety/version.json` | - | How the safety rules were built (counts before and after cleaning) |
+| `procedures/procedures.json` | 1,015 | Procedures library: guide + record form per procedure (draft) |
+| `procedures/version.json` | - | Procedures content version, status and review counts |
 | `version.json` | - | Data version, source commit, per-file counts and checksums |
 
 ---
@@ -251,6 +253,72 @@ after cleaning, and the second-review outcome (1,071 alert rules kept, 468 downg
 
 `version.json` (top level) records `data_version`, `build_date`, the AccessEMR source commit, upstream dataset
 versions and, per file, `records`, `bytes` and `sha256`. Check it to see which data you have.
+
+---
+
+## Procedures library: `procedures/procedures.json`
+
+The procedures library AccessEMR offers on every visit: what a clinician searches to record a procedure, the
+way they search ICD-10 for a diagnosis. Each entry has a short guide (indications, contraindications,
+equipment, steps, aftercare, red flags) and a **record form**, the fields to fill in when the procedure is done.
+It is for recording only: there are no prices or billing codes.
+
+1,015 procedures in 25 specialties, from nursing and bedside tasks to major operations: Anaesthesia 35,
+Cardiology 31, Dental and maxillofacial 41, Dermatology 32, Ear, nose and throat 48, Family planning 22,
+Gastroenterology and endoscopy 34, General and emergency 50, General surgery 80, Gynaecology 53, Imaging and
+image-guided procedures 41, Internal medicine 27, Laboratory sampling and bedside tests 40, Mental health 25,
+Neonatal 35, Nephrology 18, Nursing 55, Obstetrics 49, Ophthalmology 49, Orthopaedics 64, Paediatrics 40,
+Physiotherapy and rehabilitation 36, Public health 38, Respiratory 24, Urology 48.
+
+**Status: draft.** The content has not yet had clinical sign-off (see `procedures/version.json` and
+SOURCES-AND-TERMS.md). AccessEMR shows it to clinicians with the same caveat.
+
+A JSON array, one procedure per line:
+
+| Field | Meaning |
+| --- | --- |
+| `code` | Stable code `PRC-<specialty>-<number>`, e.g. `PRC-MED-001`. Use it as your key. |
+| `name` | e.g. `Lumbar puncture`. |
+| `specialty_key`, `specialty_name` | e.g. `internal_medicine`, `Internal medicine`. |
+| `synonyms` | Other names and abbreviations clinicians search for: `["LP", "spinal tap", ...]`. |
+| `paediatric` | `true` when the procedure is also done in children (630 of them). |
+| `consent` | `none` (50), `verbal` (441) or `written` (524): the consent it usually needs. |
+| `content` | `{ indications, contraindications, equipment, steps, aftercare, red_flags }`, each a list of short texts. Steps are in order. `contraindications` can be empty. No drug doses are given anywhere: the guides name drugs where needed but leave the dose to local protocols. |
+| `form` | The record form: a list of fields (below). 5 to 15 per procedure. |
+
+A form field:
+
+| Field | Meaning |
+| --- | --- |
+| `key` | Field id, unique within the procedure, e.g. `attempts`. |
+| `label` | What to show, e.g. `Number of attempts`. |
+| `section` | `Before`, `Procedure`, `After` or `Outcome`: group the form by these, in that order. |
+| `type` | `choice` (pick one), `multi` (pick any), `text` (free text, max 200 characters) or `number`. |
+| `options` | The choices for `choice` and `multi`; an empty list for `text` and `number`. |
+| `other` | Optional. `true` when the field should also accept a typed answer not in `options`. |
+| `unit` | Optional, for `number` fields: `mL`, `min`, `cm`, ... |
+
+Every form has a `complications` field (`multi`, includes `None`) and an `outcome` field.
+
+Example (shortened):
+
+```json
+{"code":"PRC-MED-001","name":"Lumbar puncture","specialty_key":"internal_medicine",
+ "specialty_name":"Internal medicine","synonyms":["LP","spinal tap","CSF tap","CSF analysis"],
+ "paediatric":true,"consent":"written",
+ "content":{"indications":["Suspected meningitis or encephalitis", "..."],"steps":["...", "..."], "...":[]},
+ "form":[{"key":"position","label":"Position","section":"Procedure","type":"choice",
+          "options":["Lateral decubitus","Sitting"]},
+         {"key":"attempts","label":"Number of attempts","section":"Procedure","type":"number","options":[],
+          "unit":"attempts"}, "..."]}
+```
+
+**How AccessEMR stores a recorded procedure** (if you want the same shape): as a clinical note on the visit,
+with `note_type: "procedure"`, `template_id: <code>` and the answers as
+`structured_data: { template_code: <code>, values: { <field key>: <answer> } }`. A `choice` or `text` answer is
+a string, a `multi` answer a list of strings, a `number` answer a number.
+
+`procedures/version.json` gives the content version, its status (`draft`), the counts and how it was reviewed.
 
 ---
 

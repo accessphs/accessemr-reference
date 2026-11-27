@@ -3,8 +3,11 @@ import { readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { createSafetyEngine, type SafetyEngine } from './engine.js';
 import { moduleDir } from './here.js';
-import { searchDrugRecords, searchIcd10Records, type Icd10Record } from './search.js';
-import type { SafetyData } from './types.js';
+import {
+  findProcedure, procedureSpecialties, searchDrugRecords, searchIcd10Records, searchProcedureRecords,
+  type Icd10Record, type ProcedureSearchOptions,
+} from './search.js';
+import type { ProcedureRecord, SafetyData } from './types.js';
 
 export * from './index.js';
 
@@ -27,6 +30,11 @@ export function loadDefaultData(dataDir: string = defaultDataDir): SafetyData {
 /** Reads data/icd10/icd10_codes.json. */
 export function loadIcd10(dataDir: string = defaultDataDir): Icd10Record[] {
   return readJson(dataDir, 'icd10/icd10_codes.json');
+}
+
+/** Reads data/procedures/procedures.json (the procedures library). */
+export function loadProcedures(dataDir: string = defaultDataDir): ProcedureRecord[] {
+  return readJson(dataDir, 'procedures/procedures.json');
 }
 
 /** Reads data/version.json (dataset versions, counts and checksums). */
@@ -56,4 +64,22 @@ let drugs: SafetyData['drugs'] | null = null;
 function defaultEngineDrugs(): SafetyData['drugs'] {
   if (!drugs) drugs = readJson<SafetyData['drugs']>(defaultDataDir, 'medications/drugs.json');
   return drugs;
+}
+
+let procedures: ProcedureRecord[] | null = null;
+const bundledProcedures = (): ProcedureRecord[] => (procedures ??= loadProcedures());
+
+/** Searches the bundled procedures library (loaded on first use). */
+export function searchProcedures(query: string, limit = 20, options: ProcedureSearchOptions = {}) {
+  return searchProcedureRecords(bundledProcedures(), query, limit, options);
+}
+
+/** A bundled procedure by code ("PRC-OBS-004"), or undefined. */
+export function getProcedure(code: string): ProcedureRecord | undefined {
+  return findProcedure(bundledProcedures(), code);
+}
+
+/** The bundled procedure specialties with their counts. */
+export function listProcedureSpecialties() {
+  return procedureSpecialties(bundledProcedures());
 }

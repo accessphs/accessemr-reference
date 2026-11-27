@@ -1,6 +1,6 @@
 // Simple, dependency-free search over the ICD-10 list and the drug list. Case-insensitive; prefix matches rank
 // above word-prefix matches, which rank above substring matches. Ties keep the data-file order.
-import type { DrugRecord } from './types.js';
+import type { DrugRecord, ProcedureRecord } from './types.js';
 import { squish, strip, toS, uniq } from './text.js';
 
 export interface Icd10Record {
@@ -139,9 +139,92 @@ export function searchDrugRecords(records: readonly DrugRecord[], query: string,
   return top(scored, limit);
 }
 
+export interface ProcedureSearchOptions {
+  /** Only this specialty (its `specialty_key`, e.g. "obstetrics"). */
+  specialty?: string;
+  /** Only procedures marked as done in children. */
+  paediatric?: boolean;
+}
+
+export interface ProcedureSearchResult extends ProcedureRecord {
+  /** The text that matched the query (the code, the name or a synonym). */
+  matched: string;
+}
+
+interface ProcedureEntry { record: ProcedureRecord; code: string; terms: Array<{ text: string; key: string; weight: number }> }
+const procedureCache = new WeakMap<readonly ProcedureRecord[], ProcedureEntry[]>();
+
+function procedureEntries(records: readonly ProcedureRecord[]): ProcedureEntry[] {
+  let entries = procedureCache.get(records);
+  if (!entries) {
+    entries = records.map((record) => ({
+      record,
+      code: toS(record.code).toUpperCase(),
+      terms: [
+        { text: record.name, key: key(record.name), weight: 0 },
+        ...(record.synonyms ?? []).map((synonym) => ({ text: synonym, key: key(synonym), weight: 1 })),
+      ],
+    }));
+    procedureCache.set(records, entries);
+  }
+  return entries;
+}
+
+/**
+ * Search the procedures library by code ("PRC-OBS-004", "prc-obs"), name or synonym ("LP", "C-section").
+ * An empty query lists every procedure (after the filters) in file order.
+ */
+export function searchProcedureRecords(records: readonly ProcedureRecord[], query: string, limit = 20,
+  options: ProcedureSearchOptions = {}): ProcedureSearchResult[] {
+  const q = key(query);
+  const qCode = toS(query).trim().toUpperCase();
+  const scored: Array<{ rank: number; position: number; value: ProcedureSearchResult }> = [];
+  procedureEntries(records).forEach((entry, position) => {
+    const { record } = entry;
+    if (options.specialty && record.specialty_key !== options.specialty) return;
+    if (options.paediatric && !record.paediatric) return;
+    if (!q) {
+      scored.push({ rank: 0, position, value: { ...record, matched: record.name } });
+      return;
+    }
+    if (qCode.startsWith('PRC') && entry.code.startsWith(qCode)) {
+      scored.push({ rank: entry.code === qCode ? 0 : 1, position, value: { ...record, matched: record.code } });
+      return;
+    }
+    let best: { rank: number; text: string } | null = null;
+    for (const term of entry.terms) {
+      const s = score(term.key, q);
+      if (s === null) continue;
+      // Name matches beat synonym matches of the same quality.
+      const rank = 2 + s * 2 + term.weight;
+      if (!best || rank < best.rank) best = { rank, text: term.text };
+    }
+    if (best) scored.push({ rank: best.rank, position, value: { ...record, matched: best.text } });
+  });
+  return top(scored, limit);
+}
+
+/** A procedure by its code (case-insensitive), or undefined. */
+export function findProcedure(records: readonly ProcedureRecord[], code: string): ProcedureRecord | undefined {
+  const wanted = toS(code).trim().toUpperCase();
+  return procedureEntries(records).find((entry) => entry.code === wanted)?.record;
+}
+
+/** The specialties in a procedures list, in file order, with how many procedures each has. */
+export function procedureSpecialties(records: readonly ProcedureRecord[]) {
+  const byKey = new Map<string, { key: string; name: string; procedures: number }>();
+  for (const record of records) {
+    const entry = byKey.get(record.specialty_key) ?? { key: record.specialty_key, name: record.specialty_name, procedures: 0 };
+    entry.procedures += 1;
+    byKey.set(record.specialty_key, entry);
+  }
+  return [...byKey.values()];
+}
+
 export interface SearchData {
   icd10?: readonly Icd10Record[];
   drugs?: readonly DrugRecord[];
+  procedures?: readonly ProcedureRecord[];
 }
 
 /** Search helpers bound to your data (e.g. the imported JSON files). */
@@ -149,6 +232,10 @@ export function createSearch(data: SearchData) {
   return {
     searchIcd10: (query: string, limit = 20) => searchIcd10Records(data.icd10 ?? [], query, limit),
     searchDrugs: (query: string, limit = 20) => searchDrugRecords(data.drugs ?? [], query, limit),
+    searchProcedures: (query: string, limit = 20, options: ProcedureSearchOptions = {}) =>
+      searchProcedureRecords(data.procedures ?? [], query, limit, options),
+    /** A procedure by its code (case-insensitive), or undefined. */
+    procedure: (code: string) => findProcedure(data.procedures ?? [], code),
   };
 }
 

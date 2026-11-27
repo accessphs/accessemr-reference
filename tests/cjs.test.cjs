@@ -12,6 +12,7 @@ test('CommonJS entry points load and check', () => {
   const result = engine.check({ drugs: [{ name: 'Ibuprofen' }], currentMeds: [{ name: 'Warfarin' }] });
   assert.equal(result.alerts[0].rule_id, 'ix:21f99a854b309b8b');
   assert.equal(node.searchIcd10('A00.9', 1)[0].code, 'A00.9');
+  assert.equal(node.searchProcedures('LP', 1)[0].code, node.getProcedure('PRC-MED-001').code);
 });
 
 test('the main entry point has no Node-only imports (safe for browsers and React Native)', () => {

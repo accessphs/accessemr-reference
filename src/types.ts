@@ -144,3 +144,42 @@ export interface CheckResult {
   /** Quiet findings: show inline, no confirmation needed. */
   notices: Item[];
 }
+
+/** One field of a procedure's record form (the same item format as AccessEMR's note templates). */
+export interface ProcedureFormItem {
+  key: string;
+  label: string;
+  /** Where the field sits on the form. */
+  section: 'Before' | 'Procedure' | 'After' | 'Outcome';
+  /** choice = pick one, multi = pick any, text = free text (max 200 characters), number = a number (with `unit`). */
+  type: 'choice' | 'multi' | 'text' | 'number';
+  /** The choices for choice / multi items; empty for text and number. */
+  options: string[];
+  /** true when the form should also accept a typed "other" answer. */
+  other?: boolean;
+  /** Unit for number items, e.g. "mL", "min". */
+  unit?: string;
+}
+
+/** One entry of data/procedures/procedures.json. */
+export interface ProcedureRecord {
+  /** Stable code, e.g. "PRC-ANAE-001" (PRC-<specialty>-<number>). */
+  code: string;
+  name: string;
+  specialty_key: string;
+  specialty_name: string;
+  synonyms: string[];
+  /** true when the procedure is also done in children. */
+  paediatric: boolean;
+  /** Consent the procedure usually needs. */
+  consent: 'none' | 'verbal' | 'written';
+  content: {
+    indications: string[];
+    contraindications: string[];
+    equipment: string[];
+    steps: string[];
+    aftercare: string[];
+    red_flags: string[];
+  };
+  form: ProcedureFormItem[];
+}

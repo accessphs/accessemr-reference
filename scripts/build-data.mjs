@@ -6,7 +6,7 @@
 //
 // - CSV and JSON files that need no conversion are copied byte for byte.
 // - drugs.json and icd10_codes.json are generated from their CSVs (one record per line).
-// - YAML files (labkb/common.yml, medkb/safety/allergy_groups.yml) are converted by scripts/yaml2json.rb
+// - YAML files (labkb/common.yml, medkb/safety/allergy_groups.yml, procedures/*.yml) are converted by scripts/yaml2json.rb
 //   (needs `ruby` on PATH; Ruby's standard library has a YAML parser, so no npm dependency is needed).
 // - data/version.json records the source commit, record counts and a SHA-256 per file. Its build_date and
 //   data_version only change when some file's content changes (or with --date), so a re-run on the same
@@ -81,6 +81,30 @@ function drugRecords(text) {
   });
 }
 
+const PROCEDURE_CONTENT = ['indications', 'contraindications', 'equipment', 'steps', 'aftercare', 'red_flags'];
+
+// YAML 1.1 reads a bare Yes / No as true / false; the files mean the words (same as AccessEMR's loader).
+const optionText = (value) => (value === true ? 'Yes' : value === false ? 'No' : String(value));
+
+// One procedures library entry in the shape AccessEMR's API returns (option set names expanded, every content
+// list present, `other` and `unit` only when given).
+function procedureRecord(entry, specialty, optionSets) {
+  const form = (entry.form || []).map((item) => {
+    const options = typeof item.options === 'string' ? optionSets[item.options] : item.options;
+    const resolved = { key: item.key, label: String(item.label).trim(), section: item.section, type: item.type,
+      options: (options || []).map(optionText) };
+    if ('other' in item) resolved.other = item.other === true;
+    if (item.unit !== undefined && item.unit !== null && String(item.unit) !== '') resolved.unit = String(item.unit);
+    return resolved;
+  });
+  return {
+    code: entry.code, name: String(entry.name).trim(), specialty_key: String(specialty.key),
+    specialty_name: String(specialty.name), synonyms: (entry.synonyms || []).map((s) => String(s).trim()),
+    paediatric: entry.paediatric === true, consent: entry.consent,
+    content: Object.fromEntries(PROCEDURE_CONTENT.map((field) => [field, entry[field] || []])), form,
+  };
+}
+
 function build(args) {
   const core = path.resolve(args.core);
   const src = (rel) => path.join(core, rel);
@@ -128,6 +152,18 @@ function build(args) {
   const safetyVersion = read('db/data/medkb/safety/version.json');
   put('safety/version.json', safetyVersion, 'db/data/medkb/safety/version.json', null);
 
+  // Procedures library
+  const procDir = 'db/data/procedures';
+  const procedures = [];
+  for (const name of fs.readdirSync(src(procDir)).filter((f) => f.endsWith('.yml')).sort()) {
+    const doc = yamlToJson(src(`${procDir}/${name}`));
+    for (const entry of doc.procedures || []) procedures.push(procedureRecord(entry, doc.specialty, doc.option_sets || {}));
+  }
+  put('procedures/procedures.json', jsonLines(procedures),
+    `${procDir} (YAML files, one per specialty, converted; option sets expanded)`, procedures.length);
+  const procVersion = read(`${procDir}/version.json`);
+  put('procedures/version.json', procVersion, `${procDir}/version.json`, null);
+
   // Top-level version.json
   const commit = git(core, 'rev-parse', 'HEAD');
   const datasets = [...files.entries()].map(([rel, f]) => {
@@ -147,6 +183,7 @@ function build(args) {
   const date = args.date || (unchanged ? previous.build_date : new Date().toISOString().slice(0, 10));
   const labVersion = JSON.parse(read('db/data/labkb/version.json'));
   const safetyDoc = JSON.parse(safetyVersion);
+  const procDoc = JSON.parse(procVersion);
   const version = {
     name: '@accessphs/accessemr-reference data',
     data_version: date.replaceAll('-', '.'),
@@ -160,6 +197,8 @@ function build(args) {
       safety_curated_version: safetyDoc.curated_version,
       allergy_groups_version: groups.version ?? null,
       common_labs_version: common.version ?? null,
+      procedures_version: procDoc.version ?? null,
+      procedures_status: procDoc.status ?? null,
     },
     datasets,
   };

@@ -1,8 +1,8 @@
 {
   "name": "@accessphs/accessemr-reference",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "private": true,
-  "description": "AccessEMR reference data (ICD-10, drug list, lab catalogue, drug-safety rules) and a local, dependency-free drug-safety engine for Node, browsers and React Native.",
+  "description": "AccessEMR reference data (ICD-10, drug list, lab catalogue, drug-safety rules, procedures library) and a local, dependency-free drug-safety engine for Node, browsers and React Native.",
   "license": "UNLICENSED",
   "type": "module",
   "main": "./dist/cjs/index.js",

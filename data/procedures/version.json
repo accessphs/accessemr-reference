@@ -1,0 +1,8 @@
+{
+  "version": "2026.11.26",
+  "status": "draft",
+  "procedures": 1015,
+  "specialties": 25,
+  "review": { "second_pass": "independent model review of every entry", "keep": 873, "fix": 142, "drop": 0, "log": "review_log.csv" },
+  "clinical_signoff": "pending (Dr O)"
+}

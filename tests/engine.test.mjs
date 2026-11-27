@@ -9,6 +9,7 @@ import {
   withoutSalt,
   parseCsv,
   parseIcd10Csv,
+  searchProcedureRecords,
 } from '../dist/esm/index.js';
 import {
   defaultEngine,
@@ -17,6 +18,10 @@ import {
   loadDataVersion,
   searchDrugs,
   searchIcd10,
+  loadProcedures,
+  searchProcedures,
+  getProcedure,
+  listProcedureSpecialties,
 } from '../dist/esm/node.js';
 
 const data = loadDefaultData();
@@ -148,5 +153,44 @@ test('data/version.json counts match the files', () => {
   assert.equal(count('safety/rules.json'), data.rules.rules.length);
   assert.equal(count('safety/classes.json'), data.classes.length);
   assert.equal(count('safety/allergy_groups.json'), data.allergyGroups.groups.length);
+  assert.equal(count('procedures/procedures.json'), loadProcedures().length);
   assert.ok(!version.datasets.some((d) => /review_log/.test(d.file)));
+});
+
+test('procedures: every entry is complete and uses the AccessEMR form format', () => {
+  const list = loadProcedures();
+  assert.equal(list.length, 1015);
+  assert.equal(new Set(list.map((p) => p.code)).size, list.length);
+  for (const p of list) {
+    assert.match(p.code, /^PRC-[A-Z]{2,4}-\d{3}$/);
+    assert.ok(['none', 'verbal', 'written'].includes(p.consent), p.code);
+    assert.ok(p.content.steps.length >= 4, p.code);
+    const keys = p.form.map((item) => item.key);
+    assert.ok(keys.includes('complications') && keys.includes('outcome'), p.code);
+    assert.ok(p.form.find((item) => item.key === 'complications').options.includes('None'), p.code);
+    for (const item of p.form) {
+      assert.ok(['Before', 'Procedure', 'After', 'Outcome'].includes(item.section), `${p.code} ${item.key}`);
+      assert.ok(['choice', 'multi', 'text', 'number'].includes(item.type), `${p.code} ${item.key}`);
+      assert.equal(item.options.length > 0, ['choice', 'multi'].includes(item.type), `${p.code} ${item.key}`);
+      assert.ok(item.options.every((o) => typeof o === 'string' && o.trim()), `${p.code} ${item.key}`);
+    }
+  }
+});
+
+test('searchProcedures by code, name and synonym, with filters', () => {
+  assert.equal(searchProcedures('LP', 1)[0].name, 'Lumbar puncture');
+  assert.equal(searchProcedures('LP', 1)[0].matched, 'LP');
+  assert.equal(searchProcedures('prc-anae-001', 5).length, 1);
+  assert.ok(searchProcedures('PRC-OBS', 50).every((p) => p.code.startsWith('PRC-OBS-')));
+  assert.equal(searchProcedures('caesarean', 1)[0].code, 'PRC-OBS-016');
+  assert.ok(searchProcedures('', 500, { specialty: 'neonatal' }).every((p) => p.specialty_key === 'neonatal'));
+  assert.ok(searchProcedures('', 2000, { paediatric: true }).every((p) => p.paediatric));
+  assert.deepEqual(searchProcedures('zzzz', 5), []);
+  assert.equal(getProcedure('prc-anae-001').name, 'General anaesthesia');
+  assert.equal(getProcedure('PRC-XX-999'), undefined);
+  const specialties = listProcedureSpecialties();
+  assert.equal(specialties.length, 25);
+  assert.equal(specialties.reduce((n, s) => n + s.procedures, 0), 1015);
+  assert.deepEqual(createSearch({ procedures: loadProcedures() }).searchProcedures('LP', 1)[0].code,
+    searchProcedureRecords(loadProcedures(), 'LP', 1)[0].code);
 });
